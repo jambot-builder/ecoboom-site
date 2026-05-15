@@ -1,121 +1,91 @@
 import React from 'react';
-import { Volume2, Zap, Calendar, Award, ArrowRight, Instagram, Youtube, Linkedin } from 'lucide-react';
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-black text-white font-sans selection:bg-yellow-400 selection:text-black">
+    <div style={{ backgroundColor: 'black', color: 'white', minHeight: '100vh', fontFamily: 'sans-serif', padding: '0', margin: '0' }}>
       {/* Navigation */}
-      <nav className="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10 px-6 py-4 flex justify-between items-center">
-        <div className="text-2xl font-black tracking-tighter italic">ECOBOOM</div>
-        <div className="hidden md:flex gap-8 text-sm font-medium uppercase tracking-widest text-white/70">
-          <a href="#services" className="hover:text-white transition-colors">Services</a>
-          <a href="#about" className="hover:text-white transition-colors">About</a>
-          <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+      <nav style={{ 
+        position: 'fixed', 
+        width: '100%', 
+        top: 0, 
+        zIndex: 1000, 
+        backgroundColor: 'rgba(0,0,0,0.95)', 
+        backdropFilter: 'blur(10px)', 
+        borderBottom: '1px solid #222',
+        display: 'flex',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: '15px 20px',
+        boxSizing: 'border-box'
+      }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          <img src="/logo.jpg" alt="ECOBOOM" style={{ height: '35px', display: 'block' }} />
         </div>
-        <a href="#contact" className="bg-white text-black px-5 py-2 text-xs font-bold uppercase tracking-tighter hover:bg-yellow-400 transition-colors">
-          Let's Talk
-        </a>
+        <div style={{ display: 'flex', gap: '20px', textTransform: 'uppercase', fontSize: '0.65rem', fontWeight: '900', letterSpacing: '0.1em' }}>
+          <a href="#services" style={{ color: 'white', textDecoration: 'none' }}>Services</a>
+          <a href="#contact" style={{ color: '#facc15', textDecoration: 'none' }}>Contact</a>
+        </div>
       </nav>
 
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center px-6 md:px-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/60 to-transparent z-10" />
-          <img 
-            src="/api/placeholder/1920/1080" 
-            alt="Event Production" 
-            className="w-full h-full object-cover grayscale opacity-50"
-          />
-        </div>
-        
-        <div className="relative z-20 max-w-4xl">
-          <h1 className="text-6xl md:text-8xl font-black tracking-tighter leading-none mb-6">
-            POWER, <br/>REDEFINED.
+      {/* Hero */}
+      <section style={{ 
+        height: '90vh', 
+        display: 'flex', 
+        alignItems: 'center', 
+        padding: '0 20px',
+        backgroundImage: 'linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url("/hero_bg.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        position: 'relative',
+        zIndex: 1
+      }}>
+        <div style={{ maxWidth: '600px', marginTop: '40px' }}>
+          <h1 style={{ fontSize: '3.5rem', fontWeight: '900', lineHeight: '1.1', marginBottom: '20px', letterSpacing: '-0.02em' }}>
+            POWER,<br/>REDEFINED.
           </h1>
-          <p className="text-xl md:text-2xl text-white/60 max-w-2xl mb-10 font-light leading-relaxed">
-            Sustainable event production for the high-end market. Premium audio, specialized power rentals, and zero-compromise results.
+          <p style={{ fontSize: '1.2rem', color: '#ccc', marginBottom: '30px', fontWeight: '300', lineHeight: '1.5' }}>
+            Sustainable event production for the high-end market. Premium audio and specialized power rentals.
           </p>
-          <div className="flex flex-wrap gap-4">
-            <button className="bg-yellow-400 text-black px-8 py-4 font-black uppercase tracking-tighter flex items-center gap-2 hover:bg-white transition-colors group">
-              Explore Our Solutions <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </div>
+          <button style={{ backgroundColor: '#facc15', color: 'black', padding: '15px 30px', fontWeight: '900', border: 'none', cursor: 'pointer', textTransform: 'uppercase', fontSize: '0.8rem', letterSpacing: '0.1em' }}>
+            Get a Quote
+          </button>
         </div>
       </section>
 
-      {/* Stats/Value Prop */}
-      <section className="py-24 px-6 md:px-20 border-y border-white/10 bg-zinc-950">
-        <div className="grid md:grid-cols-3 gap-16">
-          <div>
-            <div className="text-5xl font-black mb-2 italic">20+</div>
-            <div className="text-sm font-bold uppercase tracking-widest text-yellow-400 mb-4">Years Experience</div>
-            <p className="text-white/50 text-sm leading-relaxed">
-              From sound engineering to event production, we bring decades of industry-leading expertise to every project.
-            </p>
-          </div>
-          <div>
-            <div className="text-5xl font-black mb-2 italic">0</div>
-            <div className="text-sm font-bold uppercase tracking-widest text-yellow-400 mb-4">Failed Clients</div>
-            <p className="text-white/50 text-sm leading-relaxed">
-              Our record is spotless. We deliver high-stakes production reliability where failure is not an option.
-            </p>
-          </div>
-          <div>
-            <div className="text-5xl font-black mb-2 italic">86%</div>
-            <div className="text-sm font-bold uppercase tracking-widest text-yellow-400 mb-4">Carbon Reduction</div>
-            <p className="text-white/50 text-sm leading-relaxed">
-              We substantially reduce the footprint of your events through sustainable design and intelligent power solutions.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Services */}
-      <section id="services" className="py-32 px-6 md:px-20">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <div className="max-w-2xl">
-            <h2 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 uppercase italic">What We Do</h2>
-            <p className="text-white/60 text-lg">Integrated production solutions that perform when it matters most.</p>
-          </div>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-px bg-white/10 border border-white/10">
-          <div className="bg-black p-12 hover:bg-zinc-900 transition-colors group">
-            <Volume2 className="w-12 h-12 text-yellow-400 mb-8 group-hover:scale-110 transition-transform" />
-            <h3 className="text-2xl font-black uppercase mb-4 tracking-tighter italic">Sound & Light</h3>
-            <p className="text-white/50 mb-8 leading-relaxed">
-              Tailored audio and lighting design for weddings, corporate summits, and festivals. We don't just set up gear; we create experiences.
-            </p>
-          </div>
-          <div className="bg-black p-12 hover:bg-zinc-900 transition-colors group">
-            <Zap className="w-12 h-12 text-yellow-400 mb-8 group-hover:scale-110 transition-transform" />
-            <h3 className="text-2xl font-black uppercase mb-4 tracking-tighter italic">Power Rentals</h3>
-            <p className="text-white/50 mb-8 leading-relaxed">
-              Specialized power distribution and rental solutions for any terrain. Reliable, efficient, and professionally managed.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact Footer */}
-      <footer id="contact" className="bg-zinc-950 pt-32 pb-12 px-6 md:px-20 border-t border-white/10">
-        <div className="grid md:grid-cols-2 gap-20 mb-32">
-          <div>
-            <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase italic mb-8">Let's Talk Production.</h2>
-            <div className="flex flex-col gap-4 text-xl">
-              <a href="tel:+18183304052" className="hover:text-yellow-400 transition-colors">(818) 330-4052</a>
-              <a href="mailto:info@ecoboom.org" className="hover:text-yellow-400 transition-colors">info@ecoboom.org</a>
+      <main style={{ padding: '40px 20px' }}>
+        {/* Services */}
+        <section id="services">
+          <h2 style={{ fontSize: '1.8rem', fontWeight: '900', fontStyle: 'italic', textTransform: 'uppercase', borderBottom: '1px solid #222', paddingBottom: '15px', marginBottom: '30px' }}>
+            Expertise
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '20px' }}>
+            <div style={{ position: 'relative', height: '250px', backgroundImage: 'linear-gradient(to top, black, transparent), url("/event-1.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', padding: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', border: '1px solid #222' }}>
+              <h3 style={{ color: '#facc15', fontSize: '1.2rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '5px' }}>Audio Production</h3>
+              <p style={{ color: '#bbb', fontSize: '0.8rem' }}>High-fidelity sound design for any scale.</p>
+            </div>
+            <div style={{ position: 'relative', height: '250px', backgroundImage: 'linear-gradient(to top, black, transparent), url("/event-2.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', padding: '20px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', border: '1px solid #222' }}>
+              <h3 style={{ color: '#facc15', fontSize: '1.2rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '5px' }}>Power Rentals</h3>
+              <p style={{ color: '#bbb', fontSize: '0.8rem' }}>Clean, silent energy for remote locations.</p>
             </div>
           </div>
-          <div className="flex flex-col justify-end">
-            <div className="flex gap-6 mb-8">
-              <Instagram className="w-6 h-6 text-white/40 hover:text-white cursor-pointer" />
-              <Youtube className="w-6 h-6 text-white/40 hover:text-white cursor-pointer" />
-              <Linkedin className="w-6 h-6 text-white/40 hover:text-white cursor-pointer" />
-            </div>
-            <p className="text-white/30 text-sm">© 2026 ECOBOOM PRODUCTION COMPANY. ALL RIGHTS RESERVED.</p>
+        </section>
+
+        {/* Stats */}
+        <section style={{ marginTop: '60px', display: 'grid', gridTemplateColumns: '1fr', gap: '30px', padding: '40px 0', borderTop: '1px solid #222' }}>
+          <div>
+            <div style={{ fontSize: '3rem', fontWeight: '900', fontStyle: 'italic', lineHeight: '1' }}>20+</div>
+            <div style={{ color: '#facc15', fontWeight: 'bold', textTransform: 'uppercase', fontSize: '0.7rem' }}>Years Experience</div>
           </div>
-        </div>
+          <div>
+            <div style={{ fontSize: '3rem', fontWeight: '900', fontStyle: 'italic', lineHeight: '1' }}>0</div>
+            <div style={{ color: '#facc15', fontWeight: 'bold', textTransform: 'uppercase', fontSize: '0.7rem' }}>Failed Clients</div>
+          </div>
+        </section>
+      </main>
+
+      <footer id="contact" style={{ padding: '60px 20px', backgroundColor: '#050505', textAlign: 'center', borderTop: '1px solid #222' }}>
+        <img src="/logo.jpg" alt="ECOBOOM" style={{ height: '25px', opacity: '0.5', marginBottom: '20px' }} />
+        <p style={{ color: '#444', fontSize: '0.6rem' }}>© 2026 ECOBOOM PRODUCTION COMPANY. ALL RIGHTS RESERVED.</p>
       </footer>
     </div>
   );
