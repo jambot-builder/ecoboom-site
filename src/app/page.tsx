@@ -19,15 +19,24 @@ const LandingPage = () => {
         boxSizing: 'border-box'
       }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          {/* Original Logo with Perimeter Stroke */}
+          {/* Original Logo with White Perimeter Stroke via Multi-Drop-Shadow */}
           <div style={{ 
-            filter: 'drop-shadow(1px 1px 0 #fff) drop-shadow(-1px -1px 0 #fff) drop-shadow(1px -1px 0 #fff) drop-shadow(-1px 1px 0 #fff) drop-shadow(0px 1px 0 #fff) drop-shadow(0px -1px 0 #fff) drop-shadow(1px 0px 0 #fff) drop-shadow(-1px 0px 0 #fff)' 
+            filter: `
+              drop-shadow(1px 0 0 #fff) 
+              drop-shadow(-1px 0 0 #fff) 
+              drop-shadow(0 1px 0 #fff) 
+              drop-shadow(0 -1px 0 #fff)
+              drop-shadow(1px 1px 0 #fff)
+              drop-shadow(-1px -1px 0 #fff)
+              drop-shadow(1px -1px 0 #fff)
+              drop-shadow(-1px 1px 0 #fff)
+            `
           }}>
             <img 
               src="/logo.jpg" 
               alt="ECOBOOM" 
               style={{ 
-                height: '32px', 
+                height: '35px', 
                 width: 'auto', 
                 display: 'block', 
                 objectFit: 'contain'
@@ -61,7 +70,7 @@ const LandingPage = () => {
           <h1 style={{ fontSize: 'clamp(3rem, 10vw, 6rem)', fontWeight: '900', lineHeight: '1.0', marginBottom: '24px', letterSpacing: '-0.04em', textTransform: 'uppercase' }}>
             POWER,<br/><span style={{ color: '#facc15' }}>REDEFINED.</span>
           </h1>
-          <p style={{ fontSize: 'clamp(1rem, 3.5vw, 1.4rem)', color: 'rgba(255,255,255,0.8)', marginBottom: '40px', fontWeight: '400', maxWidth: '540px', margin: '0 auto 40px auto', lineHeight: '1.5' }}>
+          <p style={{ fontSize: 'clamp(1rem, 4vw, 1.4rem)', color: 'rgba(255,255,255,0.8)', marginBottom: '40px', fontWeight: '400', maxWidth: '540px', margin: '0 auto 40px auto', lineHeight: '1.5' }}>
             Sustainable event production for the high-end market. Premium audio and specialized power rentals.
           </p>
           <button style={{ backgroundColor: '#facc15', color: '#000', padding: '18px 48px', fontWeight: '900', border: 'none', cursor: 'pointer', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.15em', borderRadius: '2px' }}>
