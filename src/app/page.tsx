@@ -19,22 +19,12 @@ const LandingPage = () => {
         boxSizing: 'border-box'
       }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          {/* Logo container - Claude Code to fix stroke */}
-          <div style={{ 
-            filter: `
-              drop-shadow(1px 0 0 #fff) 
-              drop-shadow(-1px 0 0 #fff) 
-              drop-shadow(0 1px 0 #fff) 
-              drop-shadow(0 -1px 0 #fff)
-              drop-shadow(1px 1px 0 #fff)
-              drop-shadow(-1px -1px 0 #fff)
-              drop-shadow(1px -1px 0 #fff)
-              drop-shadow(-1px 1px 0 #fff)
-            `
-          }}>
+          {/* Logo container - using the new stroked PNG once the subagent finishes */}
+          <div>
             <img 
-              src="/logo.jpg" 
+              src="/logo_stroked.png" 
               alt="ECOBOOM" 
+              onError={(e) => { e.currentTarget.src = "/logo.jpg"; e.currentTarget.style.filter = "drop-shadow(1px 1px 0 #fff) drop-shadow(-1px -1px 0 #fff)"; }}
               style={{ 
                 height: '35px', 
                 width: 'auto', 
@@ -74,75 +64,62 @@ const LandingPage = () => {
           <p style={{ fontSize: 'clamp(1rem, 4vw, 1.4rem)', color: 'rgba(255,255,255,0.8)', marginBottom: '40px', fontWeight: '400', maxWidth: '540px', margin: '0 auto 40px auto', lineHeight: '1.5' }}>
             Sustainable event production for the high-end market. Premium audio and specialized power rentals.
           </p>
-          <button style={{ backgroundColor: '#facc15', color: '#000', padding: '18px 48px', fontWeight: '900', border: 'none', cursor: 'pointer', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.15em', borderRadius: '2px' }}>
-            Get a Quote
-          </button>
+          <a href="#rentals" style={{ backgroundColor: '#facc15', color: '#000', padding: '18px 48px', fontWeight: '900', border: 'none', cursor: 'pointer', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.15em', borderRadius: '2px', textDecoration: 'none', display: 'inline-block' }}>
+            View Fleet & Gear
+          </a>
         </div>
       </section>
 
       <main style={{ padding: '80px 24px', maxWidth: '1200px', margin: '0 auto' }}>
-        {/* Services */}
-        <section id="services">
+        {/* Rentals Navigation / Fleet - UPDATED WITH CARDS */}
+        <section id="rentals" style={{ marginBottom: '100px' }}>
           <h2 style={{ fontSize: '1.8rem', fontWeight: '900', textTransform: 'uppercase', borderBottom: '2px solid #facc15', paddingBottom: '16px', marginBottom: '48px', letterSpacing: '0.1em', display: 'inline-block' }}>
-            Core Expertise
+            High-End Rentals & Fleet
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px' }}>
-            <div style={{ position: 'relative', height: '450px', backgroundImage: 'linear-gradient(to top, rgba(0,0,0,1) 10%, transparent), url("/event-1.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', padding: '32px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', border: '1px solid rgba(255,255,255,0.1)', boxSizing: 'border-box' }}>
-              <h3 style={{ color: '#facc15', fontSize: '1.4rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.05em' }}>Audio Production</h3>
-              <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: '1.6', fontSize: '0.95rem' }}>High-fidelity sound design for events of any scale.</p>
-            </div>
-            <div style={{ position: 'relative', height: '450px', backgroundImage: 'linear-gradient(to top, rgba(0,0,0,1) 10%, transparent), url("/event-2.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', padding: '32px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', border: '1px solid rgba(255,255,255,0.1)', boxSizing: 'border-box' }}>
-              <h3 style={{ color: '#facc15', fontSize: '1.4rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.05em' }}>Power Rentals</h3>
-              <p style={{ color: 'rgba(255,255,255,0.7)', lineHeight: '1.6', fontSize: '0.95rem' }}>Clean, silent energy solutions for remote productions.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Rentals Navigation / Fleet */}
-        <section id="rentals" style={{ marginTop: '100px' }}>
-          <h2 style={{ fontSize: '1.8rem', fontWeight: '900', textTransform: 'uppercase', borderBottom: '2px solid #facc15', paddingBottom: '16px', marginBottom: '48px', letterSpacing: '0.1em', display: 'inline-block' }}>
-            Equipment & Fleet
-          </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px' }}>
-            <div style={{ backgroundColor: '#0a0a0a', padding: '32px', border: '1px solid rgba(255,255,255,0.05)' }}>
-              <h4 style={{ color: '#fff', fontSize: '1.2rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '16px', letterSpacing: '0.05em' }}>Meyer Sound</h4>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '2' }}>
-                <li>Lina Line Arrays</li>
-                <li>Leopard Compact Arrays</li>
-                <li>750-LFC Subwoofers</li>
-                <li>900-LFC Subwoofers</li>
-              </ul>
-            </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '30px' }}>
             
-            <div style={{ backgroundColor: '#0a0a0a', padding: '32px', border: '1px solid rgba(255,255,255,0.05)' }}>
-              <h4 style={{ color: '#fff', fontSize: '1.2rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '16px', letterSpacing: '0.05em' }}>L-Acoustics</h4>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '2' }}>
-                <li>K2 Line Source</li>
-                <li>Kara II Arrays</li>
-                <li>KS28 Subwoofers</li>
-                <li>Syva Colinear Source</li>
-              </ul>
-            </div>
+            {/* Generator Card */}
+            <a href="#generator-details" style={{ textDecoration: 'none', color: 'inherit', display: 'block', border: '1px solid rgba(255,255,255,0.1)', overflow: 'hidden', backgroundColor: '#0a0a0a', transition: 'transform 0.3s ease' }}>
+              <div style={{ height: '220px', backgroundImage: 'url("/rentals/generator.png"), linear-gradient(#111, #111)', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+              <div style={{ padding: '24px' }}>
+                <h4 style={{ color: '#facc15', fontSize: '1.3rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.05em' }}>Generators & Power</h4>
+                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '16px' }}>CleanGen J250 (250 kWh), Whisperwatt 125, Mobile Solar Trailers, and Custom 50A Distribution.</p>
+                <span style={{ color: '#fff', fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.1em' }}>View Specs &rarr;</span>
+              </div>
+            </a>
 
-            <div style={{ backgroundColor: '#0a0a0a', padding: '32px', border: '1px solid rgba(255,255,255,0.05)' }}>
-              <h4 style={{ color: '#fff', fontSize: '1.2rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '16px', letterSpacing: '0.05em' }}>DJ Equipment</h4>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '2' }}>
-                <li>Pioneer CDJ-3000</li>
-                <li>Pioneer DJM-A9 / V10</li>
-                <li>Technics 1200 Turntables</li>
-                <li>Custom Booths & Monitoring</li>
-              </ul>
-            </div>
+            {/* Meyer Sound Card */}
+            <a href="#audio-details" style={{ textDecoration: 'none', color: 'inherit', display: 'block', border: '1px solid rgba(255,255,255,0.1)', overflow: 'hidden', backgroundColor: '#0a0a0a', transition: 'transform 0.3s ease' }}>
+              <div style={{ height: '220px', backgroundImage: 'url("/event-1.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+              <div style={{ padding: '24px' }}>
+                <h4 style={{ color: '#fff', fontSize: '1.3rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.05em' }}>Meyer Sound</h4>
+                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '16px' }}>Lina Line Arrays, Leopard Compact Arrays, 750-LFC & 900-LFC Subwoofers for pristine acoustics.</p>
+                <span style={{ color: '#facc15', fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.1em' }}>View Specs &rarr;</span>
+              </div>
+            </a>
 
-            <div style={{ backgroundColor: '#0a0a0a', padding: '32px', border: '1px solid rgba(255,255,255,0.05)' }}>
-              <h4 style={{ color: '#facc15', fontSize: '1.2rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '16px', letterSpacing: '0.05em' }}>Generators & Power</h4>
-              <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '2' }}>
-                <li>CleanGen J250 (250 kWh)</li>
-                <li>Whisperwatt 125</li>
-                <li>Mobile Solar Trailers</li>
-                <li>Custom Distribution (50A)</li>
-              </ul>
-            </div>
+            {/* L-Acoustics Card */}
+            <a href="#audio-details" style={{ textDecoration: 'none', color: 'inherit', display: 'block', border: '1px solid rgba(255,255,255,0.1)', overflow: 'hidden', backgroundColor: '#0a0a0a', transition: 'transform 0.3s ease' }}>
+              <div style={{ height: '220px', backgroundImage: 'url("/event-2.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', filter: 'hue-rotate(180deg)' }}></div>
+              <div style={{ padding: '24px' }}>
+                <h4 style={{ color: '#fff', fontSize: '1.3rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.05em' }}>L-Acoustics</h4>
+                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '16px' }}>K2 Line Source, Kara II Arrays, KS28 Subwoofers, and Syva Colinear Source systems.</p>
+                <span style={{ color: '#facc15', fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.1em' }}>View Specs &rarr;</span>
+              </div>
+            </a>
+
+            {/* DJ Equipment Card */}
+            <a href="#dj-details" style={{ textDecoration: 'none', color: 'inherit', display: 'block', border: '1px solid rgba(255,255,255,0.1)', overflow: 'hidden', backgroundColor: '#0a0a0a', transition: 'transform 0.3s ease' }}>
+              <div style={{ height: '220px', backgroundColor: '#1a1a1a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                 <div style={{ color: '#444', fontSize: '3rem', fontWeight: '900', fontStyle: 'italic' }}>PRO DJ</div>
+              </div>
+              <div style={{ padding: '24px' }}>
+                <h4 style={{ color: '#fff', fontSize: '1.3rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.05em' }}>DJ Equipment</h4>
+                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '16px' }}>Pioneer CDJ 3000x, DJM-A9 / V10 mixers, Technics 1200 Turntables, and custom monitoring.</p>
+                <span style={{ color: '#facc15', fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.1em' }}>View Specs &rarr;</span>
+              </div>
+            </a>
+
           </div>
         </section>
 
