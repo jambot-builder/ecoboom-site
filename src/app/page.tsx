@@ -19,7 +19,7 @@ const LandingPage = () => {
         boxSizing: 'border-box'
       }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          {/* Original Logo with White Perimeter Stroke via Multi-Drop-Shadow */}
+          {/* Logo container - Claude Code to fix stroke */}
           <div style={{ 
             filter: `
               drop-shadow(1px 0 0 #fff) 
@@ -44,8 +44,9 @@ const LandingPage = () => {
             />
           </div>
         </div>
-        <div style={{ display: 'flex', gap: '20px', textTransform: 'uppercase', fontSize: '0.7rem', fontWeight: '900', letterSpacing: '0.15em' }}>
+        <div style={{ display: 'flex', gap: '24px', textTransform: 'uppercase', fontSize: '0.7rem', fontWeight: '900', letterSpacing: '0.15em' }}>
           <a href="#services" style={{ color: '#fff', textDecoration: 'none' }}>Services</a>
+          <a href="#rentals" style={{ color: '#fff', textDecoration: 'none' }}>Rentals</a>
           <a href="#contact" style={{ color: '#facc15', textDecoration: 'none' }}>Contact</a>
         </div>
       </nav>
@@ -79,11 +80,11 @@ const LandingPage = () => {
         </div>
       </section>
 
-      <main style={{ padding: '80px 24px', maxWidth: '1100px', margin: '0 auto' }}>
+      <main style={{ padding: '80px 24px', maxWidth: '1200px', margin: '0 auto' }}>
         {/* Services */}
         <section id="services">
           <h2 style={{ fontSize: '1.8rem', fontWeight: '900', textTransform: 'uppercase', borderBottom: '2px solid #facc15', paddingBottom: '16px', marginBottom: '48px', letterSpacing: '0.1em', display: 'inline-block' }}>
-            Expertise
+            Core Expertise
           </h2>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px' }}>
             <div style={{ position: 'relative', height: '450px', backgroundImage: 'linear-gradient(to top, rgba(0,0,0,1) 10%, transparent), url("/event-1.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', padding: '32px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', border: '1px solid rgba(255,255,255,0.1)', boxSizing: 'border-box' }}>
@@ -97,19 +98,67 @@ const LandingPage = () => {
           </div>
         </section>
 
+        {/* Rentals Navigation / Fleet */}
+        <section id="rentals" style={{ marginTop: '100px' }}>
+          <h2 style={{ fontSize: '1.8rem', fontWeight: '900', textTransform: 'uppercase', borderBottom: '2px solid #facc15', paddingBottom: '16px', marginBottom: '48px', letterSpacing: '0.1em', display: 'inline-block' }}>
+            Equipment & Fleet
+          </h2>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '30px' }}>
+            <div style={{ backgroundColor: '#0a0a0a', padding: '32px', border: '1px solid rgba(255,255,255,0.05)' }}>
+              <h4 style={{ color: '#fff', fontSize: '1.2rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '16px', letterSpacing: '0.05em' }}>Meyer Sound</h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '2' }}>
+                <li>Lina Line Arrays</li>
+                <li>Leopard Compact Arrays</li>
+                <li>750-LFC Subwoofers</li>
+                <li>900-LFC Subwoofers</li>
+              </ul>
+            </div>
+            
+            <div style={{ backgroundColor: '#0a0a0a', padding: '32px', border: '1px solid rgba(255,255,255,0.05)' }}>
+              <h4 style={{ color: '#fff', fontSize: '1.2rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '16px', letterSpacing: '0.05em' }}>L-Acoustics</h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '2' }}>
+                <li>K2 Line Source</li>
+                <li>Kara II Arrays</li>
+                <li>KS28 Subwoofers</li>
+                <li>Syva Colinear Source</li>
+              </ul>
+            </div>
+
+            <div style={{ backgroundColor: '#0a0a0a', padding: '32px', border: '1px solid rgba(255,255,255,0.05)' }}>
+              <h4 style={{ color: '#fff', fontSize: '1.2rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '16px', letterSpacing: '0.05em' }}>DJ Equipment</h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '2' }}>
+                <li>Pioneer CDJ-3000</li>
+                <li>Pioneer DJM-A9 / V10</li>
+                <li>Technics 1200 Turntables</li>
+                <li>Custom Booths & Monitoring</li>
+              </ul>
+            </div>
+
+            <div style={{ backgroundColor: '#0a0a0a', padding: '32px', border: '1px solid rgba(255,255,255,0.05)' }}>
+              <h4 style={{ color: '#facc15', fontSize: '1.2rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '16px', letterSpacing: '0.05em' }}>Generators & Power</h4>
+              <ul style={{ listStyle: 'none', padding: 0, margin: 0, color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '2' }}>
+                <li>CleanGen J250 (250 kWh)</li>
+                <li>Whisperwatt 125</li>
+                <li>Mobile Solar Trailers</li>
+                <li>Custom Distribution (50A)</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
         {/* Stats */}
         <section style={{ marginTop: '100px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '64px', padding: '80px 0', borderTop: '1px solid rgba(255,255,255,0.1)', textAlign: 'center' }}>
           <div>
             <div style={{ fontSize: '4rem', fontWeight: '900', fontStyle: 'italic', lineHeight: '1', color: '#fff' }}>20+</div>
-            <div style={{ color: '#facc15', fontWeight: '900', textTransform: 'uppercase', fontSize: '0.7rem', marginTop: '16px', letterSpacing: '0.2em' }}>Years Experience</div>
+            <div style={{ color: '#facc15', fontWeight: '900', textTransform: 'uppercase', fontSize: '0.75rem', marginTop: '16px', letterSpacing: '0.2em' }}>Years Experience</div>
           </div>
           <div>
             <div style={{ fontSize: '4rem', fontWeight: '900', fontStyle: 'italic', lineHeight: '1', color: '#fff' }}>0</div>
-            <div style={{ color: '#facc15', fontWeight: '900', textTransform: 'uppercase', fontSize: '0.7rem', marginTop: '16px', letterSpacing: '0.2em' }}>Failed Projects</div>
+            <div style={{ color: '#facc15', fontWeight: '900', textTransform: 'uppercase', fontSize: '0.75rem', marginTop: '16px', letterSpacing: '0.2em' }}>Failed Projects</div>
           </div>
           <div>
             <div style={{ fontSize: '4rem', fontWeight: '900', fontStyle: 'italic', lineHeight: '1', color: '#fff' }}>86%</div>
-            <div style={{ color: '#facc15', fontWeight: '900', textTransform: 'uppercase', fontSize: '0.7rem', marginTop: '16px', letterSpacing: '0.2em' }}>Carbon Reduction</div>
+            <div style={{ color: '#facc15', fontWeight: '900', textTransform: 'uppercase', fontSize: '0.75rem', marginTop: '16px', letterSpacing: '0.2em' }}>Carbon Reduction</div>
           </div>
         </section>
       </main>
