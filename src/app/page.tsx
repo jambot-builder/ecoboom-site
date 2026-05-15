@@ -24,7 +24,6 @@ const LandingPage = () => {
             <img 
               src="/logo_stroked.png" 
               alt="ECOBOOM" 
-              onError={(e) => { e.currentTarget.src = "/logo.jpg"; e.currentTarget.style.filter = "drop-shadow(1px 1px 0 #fff) drop-shadow(-1px -1px 0 #fff)"; }}
               style={{ 
                 height: '35px', 
                 width: 'auto', 
