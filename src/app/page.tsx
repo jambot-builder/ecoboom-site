@@ -18,9 +18,11 @@ const LandingPage = () => {
         padding: '16px 24px',
         boxSizing: 'border-box'
       }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-          {/* Logo with White Outline/Stroke for legibility on black */}
-          <div style={{ filter: 'drop-shadow(0 0 1px #fff) drop-shadow(0 0 1px #fff) drop-shadow(0 0 1px #fff)' }}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
+          {/* Original Logo with Perimeter Stroke */}
+          <div style={{ 
+            filter: 'drop-shadow(1px 1px 0 #fff) drop-shadow(-1px -1px 0 #fff) drop-shadow(1px -1px 0 #fff) drop-shadow(-1px 1px 0 #fff) drop-shadow(0px 1px 0 #fff) drop-shadow(0px -1px 0 #fff) drop-shadow(1px 0px 0 #fff) drop-shadow(-1px 0px 0 #fff)' 
+          }}>
             <img 
               src="/logo.jpg" 
               alt="ECOBOOM" 
@@ -45,7 +47,7 @@ const LandingPage = () => {
         width: '100%',
         display: 'flex', 
         alignItems: 'center', 
-        justifyContent: 'center',
+        justifyContent: 'center', 
         textAlign: 'center',
         padding: '0 24px',
         backgroundImage: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url("/hero_v2.jpg")',
