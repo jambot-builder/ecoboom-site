@@ -92,7 +92,7 @@ const LandingPage = () => {
               <div style={{ height: '220px', backgroundImage: 'url("/event-1.jpg")', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
               <div style={{ padding: '24px' }}>
                 <h4 style={{ color: '#fff', fontSize: '1.3rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.05em' }}>Meyer Sound</h4>
-                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '16px' }}>Lina Line Arrays, Leopard Compact Arrays, 750-LFC & 900-LFC Subwoofers for pristine acoustics.</p>
+                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '16px' }}>Lina & Leopard Arrays, 750-LFC & 900-LFC Subwoofers, and premium Ground Stack configurations for pristine acoustics.</p>
                 <span style={{ color: '#facc15', fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.1em' }}>View Specs &rarr;</span>
               </div>
             </a>
@@ -102,7 +102,7 @@ const LandingPage = () => {
               <div style={{ height: '220px', backgroundImage: 'url("/event-2.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', filter: 'hue-rotate(180deg)' }}></div>
               <div style={{ padding: '24px' }}>
                 <h4 style={{ color: '#fff', fontSize: '1.3rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.05em' }}>L-Acoustics</h4>
-                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '16px' }}>K2 Line Source, Kara II Arrays, KS28 Subwoofers, and Syva Colinear Source systems.</p>
+                <p style={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.9rem', lineHeight: '1.6', marginBottom: '16px' }}>K2 & Kara II Arrays, KS28 Subwoofers, Syva systems, and high-impact Ground Stack options.</p>
                 <span style={{ color: '#facc15', fontSize: '0.8rem', fontWeight: 'bold', textTransform: 'uppercase', letterSpacing: '0.1em' }}>View Specs &rarr;</span>
               </div>
             </a>
