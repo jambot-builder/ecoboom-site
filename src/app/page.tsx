@@ -18,18 +18,20 @@ const LandingPage = () => {
         padding: '16px 24px',
         boxSizing: 'border-box'
       }}>
-        <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img 
-            src="/logo_white.png" 
-            alt="ECOBOOM" 
-            style={{ 
-              height: '32px', 
-              width: 'auto', 
-              display: 'block', 
-              objectFit: 'contain',
-              filter: 'brightness(0) invert(1)' 
-            }} 
-          />
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          {/* Logo with White Outline/Stroke for legibility on black */}
+          <div style={{ filter: 'drop-shadow(0 0 1px #fff) drop-shadow(0 0 1px #fff) drop-shadow(0 0 1px #fff)' }}>
+            <img 
+              src="/logo.jpg" 
+              alt="ECOBOOM" 
+              style={{ 
+                height: '32px', 
+                width: 'auto', 
+                display: 'block', 
+                objectFit: 'contain'
+              }} 
+            />
+          </div>
         </div>
         <div style={{ display: 'flex', gap: '20px', textTransform: 'uppercase', fontSize: '0.7rem', fontWeight: '900', letterSpacing: '0.15em' }}>
           <a href="#services" style={{ color: '#fff', textDecoration: 'none' }}>Services</a>
@@ -57,7 +59,7 @@ const LandingPage = () => {
           <h1 style={{ fontSize: 'clamp(3rem, 10vw, 6rem)', fontWeight: '900', lineHeight: '1.0', marginBottom: '24px', letterSpacing: '-0.04em', textTransform: 'uppercase' }}>
             POWER,<br/><span style={{ color: '#facc15' }}>REDEFINED.</span>
           </h1>
-          <p style={{ fontSize: 'clamp(1rem, 4vw, 1.4rem)', color: 'rgba(255,255,255,0.8)', marginBottom: '40px', fontWeight: '400', maxWidth: '540px', margin: '0 auto 40px auto', lineHeight: '1.5' }}>
+          <p style={{ fontSize: 'clamp(1rem, 3.5vw, 1.4rem)', color: 'rgba(255,255,255,0.8)', marginBottom: '40px', fontWeight: '400', maxWidth: '540px', margin: '0 auto 40px auto', lineHeight: '1.5' }}>
             Sustainable event production for the high-end market. Premium audio and specialized power rentals.
           </p>
           <button style={{ backgroundColor: '#facc15', color: '#000', padding: '18px 48px', fontWeight: '900', border: 'none', cursor: 'pointer', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.15em', borderRadius: '2px' }}>
@@ -88,21 +90,20 @@ const LandingPage = () => {
         <section style={{ marginTop: '100px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '64px', padding: '80px 0', borderTop: '1px solid rgba(255,255,255,0.1)', textAlign: 'center' }}>
           <div>
             <div style={{ fontSize: '4rem', fontWeight: '900', fontStyle: 'italic', lineHeight: '1', color: '#fff' }}>20+</div>
-            <div style={{ color: '#facc15', fontWeight: '900', textTransform: 'uppercase', fontSize: '0.75rem', marginTop: '16px', letterSpacing: '0.2em' }}>Years Experience</div>
+            <div style={{ color: '#facc15', fontWeight: '900', textTransform: 'uppercase', fontSize: '0.7rem', marginTop: '16px', letterSpacing: '0.2em' }}>Years Experience</div>
           </div>
           <div>
             <div style={{ fontSize: '4rem', fontWeight: '900', fontStyle: 'italic', lineHeight: '1', color: '#fff' }}>0</div>
-            <div style={{ color: '#facc15', fontWeight: '900', textTransform: 'uppercase', fontSize: '0.75rem', marginTop: '16px', letterSpacing: '0.2em' }}>Failed Projects</div>
+            <div style={{ color: '#facc15', fontWeight: '900', textTransform: 'uppercase', fontSize: '0.7rem', marginTop: '16px', letterSpacing: '0.2em' }}>Failed Projects</div>
           </div>
           <div>
             <div style={{ fontSize: '4rem', fontWeight: '900', fontStyle: 'italic', lineHeight: '1', color: '#fff' }}>86%</div>
-            <div style={{ color: '#facc15', fontWeight: '900', textTransform: 'uppercase', fontSize: '0.75rem', marginTop: '16px', letterSpacing: '0.2em' }}>Carbon Reduction</div>
+            <div style={{ color: '#facc15', fontWeight: '900', textTransform: 'uppercase', fontSize: '0.7rem', marginTop: '16px', letterSpacing: '0.2em' }}>Carbon Reduction</div>
           </div>
         </section>
       </main>
 
       <footer id="contact" style={{ padding: '80px 24px', backgroundColor: '#000', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
-        <img src="/logo_white.png" alt="ECOBOOM" style={{ height: '24px', opacity: '0.6', marginBottom: '32px', filter: 'brightness(0) invert(1)' }} />
         <p style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.65rem', letterSpacing: '0.1em' }}>© 2026 ECOBOOM PRODUCTION COMPANY. ALL RIGHTS RESERVED.</p>
       </footer>
     </div>
