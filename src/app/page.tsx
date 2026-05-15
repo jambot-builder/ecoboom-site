@@ -9,19 +9,19 @@ const LandingPage = () => {
         width: '100%', 
         top: 0, 
         zIndex: 1000, 
-        backgroundColor: 'rgba(0,0,0,0.9)', 
-        backdropFilter: 'blur(10px)', 
-        borderBottom: '1px solid #222',
+        backgroundColor: 'rgba(0,0,0,0.95)', 
+        backdropFilter: 'blur(12px)', 
+        borderBottom: '1px solid rgba(255,255,255,0.1)',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: '12px 20px',
+        padding: '16px 24px',
         boxSizing: 'border-box'
       }}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <img src="/logo.jpg" alt="ECOBOOM" style={{ height: '32px', width: 'auto', display: 'block', objectFit: 'contain' }} />
+          <img src="/logo_white.png" alt="ECOBOOM" style={{ height: '32px', width: 'auto', display: 'block', objectFit: 'contain', filter: 'brightness(0) invert(1)' }} />
         </div>
-        <div style={{ display: 'flex', gap: '20px', textTransform: 'uppercase', fontSize: '0.65rem', fontWeight: '800', letterSpacing: '0.1em' }}>
+        <div style={{ display: 'flex', gap: '20px', textTransform: 'uppercase', fontSize: '0.7rem', fontWeight: '900', letterSpacing: '0.15em' }}>
           <a href="#services" style={{ color: '#fff', textDecoration: 'none' }}>Services</a>
           <a href="#contact" style={{ color: '#facc15', textDecoration: 'none' }}>Contact</a>
         </div>
@@ -35,64 +35,65 @@ const LandingPage = () => {
         alignItems: 'center', 
         justifyContent: 'center',
         textAlign: 'center',
-        padding: '0 20px',
-        backgroundImage: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.9)), url("/hero_bg.jpg")',
+        padding: '0 32px',
+        backgroundImage: 'linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url("/hero_v2.jpg")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        boxSizing: 'border-box'
+        boxSizing: 'border-box',
+        position: 'relative'
       }}>
-        <div style={{ maxWidth: '800px', marginTop: '60px' }}>
-          <h1 style={{ fontSize: 'clamp(3rem, 10vw, 6rem)', fontWeight: '900', lineHeight: '0.9', marginBottom: '20px', letterSpacing: '-0.04em', textTransform: 'uppercase' }}>
-            POWER,<br/><span style={{ fontStyle: 'italic' }}>REDEFINED.</span>
+        <div style={{ maxWidth: '800px', marginTop: '40px', width: '100%' }}>
+          <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 6rem)', fontWeight: '900', lineHeight: '1.0', marginBottom: '24px', letterSpacing: '-0.04em', textTransform: 'uppercase' }}>
+            POWER,<br/><span style={{ color: '#facc15' }}>REDEFINED.</span>
           </h1>
-          <p style={{ fontSize: 'clamp(1rem, 4vw, 1.5rem)', color: '#aaa', marginBottom: '40px', fontWeight: '300', maxWidth: '600px', margin: '0 auto 40px auto', lineHeight: '1.4' }}>
+          <p style={{ fontSize: 'clamp(1rem, 3.5vw, 1.4rem)', color: 'rgba(255,255,255,0.7)', marginBottom: '40px', fontWeight: '400', maxWidth: '540px', margin: '0 auto 40px auto', lineHeight: '1.5' }}>
             Sustainable event production for the high-end market. Premium audio and specialized power rentals.
           </p>
-          <button style={{ backgroundColor: '#facc15', color: '#000', padding: '16px 40px', fontWeight: '900', border: 'none', cursor: 'pointer', textTransform: 'uppercase', fontSize: '0.9rem', letterSpacing: '0.1em', borderRadius: '4px' }}>
+          <button style={{ backgroundColor: '#facc15', color: '#000', padding: '18px 48px', fontWeight: '900', border: 'none', cursor: 'pointer', textTransform: 'uppercase', fontSize: '0.85rem', letterSpacing: '0.15em', borderRadius: '2px', boxShadow: '0 10px 20px rgba(250,204,21,0.2)' }}>
             Get a Quote
           </button>
         </div>
       </section>
 
-      <main style={{ padding: '80px 20px', maxWidth: '1200px', margin: '0 auto' }}>
+      <main style={{ padding: '80px 24px', maxWidth: '1100px', margin: '0 auto' }}>
         {/* Services */}
         <section id="services">
-          <h2 style={{ fontSize: '2rem', fontWeight: '900', fontStyle: 'italic', textTransform: 'uppercase', borderBottom: '1px solid #222', paddingBottom: '20px', marginBottom: '40px', letterSpacing: '0.05em' }}>
-            Core Expertise
+          <h2 style={{ fontSize: '1.8rem', fontWeight: '900', textTransform: 'uppercase', borderBottom: '2px solid #facc15', paddingBottom: '16px', marginBottom: '48px', letterSpacing: '0.1em', display: 'inline-block' }}>
+            Expertise
           </h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '30px' }}>
-            <div style={{ position: 'relative', height: '450px', backgroundImage: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent), url("/event-1.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', padding: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', border: '1px solid #111', boxSizing: 'border-box' }}>
-              <h3 style={{ color: '#facc15', fontSize: '1.5rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '10px' }}>Audio Production</h3>
-              <p style={{ color: '#ccc', lineHeight: '1.5', fontSize: '0.95rem' }}>High-fidelity sound design for events of any scale.</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px' }}>
+            <div style={{ position: 'relative', height: '450px', backgroundImage: 'linear-gradient(to top, rgba(0,0,0,1) 10%, transparent), url("/event-1.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', padding: '32px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', border: '1px solid rgba(255,255,255,0.05)', boxSizing: 'border-box' }}>
+              <h3 style={{ color: '#facc15', fontSize: '1.4rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.05em' }}>Audio Production</h3>
+              <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.6', fontSize: '0.9rem' }}>High-fidelity sound design for events of any scale.</p>
             </div>
-            <div style={{ position: 'relative', height: '450px', backgroundImage: 'linear-gradient(to top, rgba(0,0,0,0.9), transparent), url("/event-2.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', padding: '30px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', border: '1px solid #111', boxSizing: 'border-box' }}>
-              <h3 style={{ color: '#facc15', fontSize: '1.5rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '10px' }}>Power Rentals</h3>
-              <p style={{ color: '#ccc', lineHeight: '1.5', fontSize: '0.95rem' }}>Clean, silent energy solutions for remote productions.</p>
+            <div style={{ position: 'relative', height: '450px', backgroundImage: 'linear-gradient(to top, rgba(0,0,0,1) 10%, transparent), url("/event-2.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', padding: '32px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end', border: '1px solid rgba(255,255,255,0.05)', boxSizing: 'border-box' }}>
+              <h3 style={{ color: '#facc15', fontSize: '1.4rem', fontWeight: '900', textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.05em' }}>Power Rentals</h3>
+              <p style={{ color: 'rgba(255,255,255,0.6)', lineHeight: '1.6', fontSize: '0.9rem' }}>Clean, silent energy solutions for remote productions.</p>
             </div>
           </div>
         </section>
 
         {/* Stats */}
-        <section style={{ marginTop: '100px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '40px', padding: '80px 0', borderTop: '1px solid #222', borderBottom: '1px solid #222', textAlign: 'center' }}>
+        <section style={{ marginTop: '100px', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '64px', padding: '80px 0', borderTop: '1px solid rgba(255,255,255,0.1)', textAlign: 'center' }}>
           <div>
             <div style={{ fontSize: '4rem', fontWeight: '900', fontStyle: 'italic', lineHeight: '1', color: '#fff' }}>20+</div>
-            <div style={{ color: '#facc15', fontWeight: '800', textTransform: 'uppercase', fontSize: '0.75rem', marginTop: '10px', letterSpacing: '0.1em' }}>Years Experience</div>
+            <div style={{ color: '#facc15', fontWeight: '900', textTransform: 'uppercase', fontSize: '0.7rem', marginTop: '16px', letterSpacing: '0.2em' }}>Years Experience</div>
           </div>
           <div>
             <div style={{ fontSize: '4rem', fontWeight: '900', fontStyle: 'italic', lineHeight: '1', color: '#fff' }}>0</div>
-            <div style={{ color: '#facc15', fontWeight: '800', textTransform: 'uppercase', fontSize: '0.75rem', marginTop: '10px', letterSpacing: '0.1em' }}>Failed Projects</div>
+            <div style={{ color: '#facc15', fontWeight: '900', textTransform: 'uppercase', fontSize: '0.7rem', marginTop: '16px', letterSpacing: '0.2em' }}>Failed Projects</div>
           </div>
           <div>
             <div style={{ fontSize: '4rem', fontWeight: '900', fontStyle: 'italic', lineHeight: '1', color: '#fff' }}>86%</div>
-            <div style={{ color: '#facc15', fontWeight: '800', textTransform: 'uppercase', fontSize: '0.75rem', marginTop: '10px', letterSpacing: '0.1em' }}>Carbon Reduction</div>
+            <div style={{ color: '#facc15', fontWeight: '900', textTransform: 'uppercase', fontSize: '0.7rem', marginTop: '16px', letterSpacing: '0.2em' }}>Carbon Reduction</div>
           </div>
         </section>
       </main>
 
-      <footer id="contact" style={{ padding: '80px 20px', backgroundColor: '#050505', textAlign: 'center', borderTop: '1px solid #222' }}>
-        <img src="/logo.jpg" alt="ECOBOOM" style={{ height: '30px', opacity: '0.6', marginBottom: '30px', filter: 'grayscale(100%)' }} />
-        <p style={{ color: '#444', fontSize: '0.7rem', letterSpacing: '0.05em' }}>© 2026 ECOBOOM PRODUCTION COMPANY. ALL RIGHTS RESERVED.</p>
+      <footer id="contact" style={{ padding: '80px 24px', backgroundColor: '#000', textAlign: 'center', borderTop: '1px solid rgba(255,255,255,0.1)' }}>
+        <img src="/logo_white.png" alt="ECOBOOM" style={{ height: '24px', opacity: '0.4', marginBottom: '32px', filter: 'brightness(0) invert(1)' }} />
+        <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '0.65rem', letterSpacing: '0.1em' }}>© 2026 ECOBOOM PRODUCTION COMPANY. ALL RIGHTS RESERVED.</p>
       </footer>
     </div>
   );
