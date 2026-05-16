@@ -21,7 +21,7 @@ const config: Config = {
         cactusDeep: "#4E5448",  // darker sage
         // Brand green — from the EcoBoom logo wordmark.
         // Adjust to the exact brand spec when confirmed.
-        ecoGreen: "#84BA40",
+        ecoGreen: "#7DB23A",
         ecoGreenDeep: "#5E8A28",
         ink: "#1A1612",         // primary text / dark sections
         smoke: "#4F4940",       // secondary text
