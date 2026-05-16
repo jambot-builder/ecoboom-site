@@ -1,28 +1,53 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import type { Metadata } from "next";
+import { Fraunces, Inter, JetBrains_Mono } from "next/font/google";
+import "./globals.css";
+import Nav from "@/components/Nav";
+import Footer from "@/components/Footer";
+import { site } from "@/data/site";
 
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['300', '400', '700', '900'],
-  display: 'swap',
-})
+const display = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+  style: ["normal", "italic"],
+});
+
+const body = Inter({
+  subsets: ["latin"],
+  variable: "--font-body",
+  display: "swap",
+});
+
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
-  title: 'ECOBOOM — Power, Redefined.',
-  description:
-    'Sustainable event production for the high-end market. Premium audio and specialized power rentals.',
-  icons: { icon: '/favicon.jpg' },
-}
+  title: {
+    default: `${site.name} — ${site.tagline}`,
+    template: `%s · ${site.name}`,
+  },
+  description: site.positioning.short,
+  metadataBase: new URL(`https://${site.domain}`),
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body>{children}</body>
+    <html
+      lang="en"
+      className={`${display.variable} ${body.variable} ${mono.variable}`}
+    >
+      <body>
+        <Nav />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
-  )
+  );
 }
