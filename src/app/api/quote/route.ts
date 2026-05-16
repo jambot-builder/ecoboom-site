@@ -52,7 +52,7 @@ export async function POST(req: Request) {
 
   try {
     const result = await sendQuoteEmail(payload);
-    return NextResponse.json({ ok: true, ...result });
+    return NextResponse.json({ ...result, ok: true });
   } catch (err) {
     console.error("Quote send failed:", err);
     return NextResponse.json(
