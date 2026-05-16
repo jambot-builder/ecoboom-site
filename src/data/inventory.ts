@@ -20,6 +20,7 @@ export type InventoryItem = {
   category: Category;
   spec: string;
   notes?: string;
+  image?: string; // Optional hotlink. Add real photos to public/images/inventory/ later.
 };
 
 export const categories: Category[] = [
@@ -46,28 +47,63 @@ export const inventory: InventoryItem[] = [
     name: "Kara II Line Array",
     brand: "L-Acoustics",
     category: "Audio",
-    spec: "Flown or ground-stacked, scalable hangs.",
+    spec: "2-way active dual-8″, 142 dB max SPL. Flown or ground-stacked, adjustable directivity.",
+    image:
+      "https://www.l-acoustics.com/wp-content/uploads/2021/03/3DR_8xKara_IIM-BUMP_01.png",
   },
   {
     id: "audio-lacoustics-kiva",
     name: "Kiva II Compact System",
     brand: "L-Acoustics",
     category: "Audio",
-    spec: "Discreet PA for fashion, brand, and small festival stages.",
+    spec: "2-way passive dual-6.5″, 138 dB max SPL. Discreet PA for fashion, brand, and small festival stages.",
+    image:
+      "https://www.l-acoustics.com/wp-content/uploads/2021/03/3DR_8xKiva_IIKIBU-SB_01.png",
+  },
+  {
+    id: "audio-meyer-tigra",
+    name: "TIGRA Medium-Format Line Array",
+    brand: "Meyer Sound",
+    category: "Audio",
+    spec: "Right-sized line array — PANTHER-level output and headroom in a smaller, faster-rigging cabinet.",
+    image:
+      "https://meyersound.com/wp-content/uploads/2026/03/tigra_main.jpg.webp",
   },
   {
     id: "audio-meyer-leopard",
-    name: "LEOPARD Line Array",
+    name: "LEOPARD Compact Line Array",
     brand: "Meyer Sound",
     category: "Audio",
-    spec: "Self-powered line array with 900-LFC subs.",
+    spec: "Self-powered compact line array, paired with 900-LFC subs.",
+    image:
+      "https://3ca9a566.delivery.rocketcdn.me/wp-content/uploads/2016/10/220118_leopard_main.jpg.webp",
+  },
+  {
+    id: "audio-meyer-1800lfc",
+    name: "1800-LFC Medium-Format Subwoofer",
+    brand: "Meyer Sound",
+    category: "Audio",
+    spec: "Deep, controlled bass — 30 Hz to 125 Hz with the authority of larger systems in a lighter footprint.",
+    image:
+      "https://3ca9a566.delivery.rocketcdn.me/wp-content/uploads/2026/03/1800-lfc_main.jpg.webp",
+  },
+  {
+    id: "audio-meyer-ultra-x80",
+    name: "ULTRA-X80 Point Source",
+    brand: "Meyer Sound",
+    category: "Audio",
+    spec: "Pound-for-pound Meyer's most powerful point source — replaces a small line array in a single box.",
+    image:
+      "https://meyersound.com/wp-content/uploads/2024/05/250522_ultra-x80_main_image_b.jpg.webp",
   },
   {
     id: "audio-meyer-ulti",
     name: "ULTRA-X40 Point Source",
     brand: "Meyer Sound",
     category: "Audio",
-    spec: "Point-source mains for stages and immersive setups.",
+    spec: "Versatile point source for stages, frontfills, and immersive setups.",
+    image:
+      "https://meyersound.com/wp-content/uploads/2019/01/ultra-x40_main.jpg.webp",
   },
   {
     id: "audio-vue-al4",
@@ -117,11 +153,12 @@ export const inventory: InventoryItem[] = [
   },
   {
     id: "gen-battery-mid",
-    name: "Battery Generator (Mid)",
-    brand: "Portable Electric",
+    name: "CleanGen 250 kWh Battery Generator",
+    brand: "EcoBoom Fleet",
     category: "Generators",
-    spec: "Zero-emission, near-silent — for film sets and indoor activations.",
-    notes: "Specific model TBD based on availability.",
+    spec: "250 kWh, 900 amps. Zero-emission, near-silent — the workhorse of our hybrid deployments.",
+    image:
+      "https://static.wixstatic.com/media/d42e03_986c311b71a3431db3ee2b7f7685df09~mv2.png/v1/fill/w_900,h_675,al_c,q_85,enc_avif,quality_auto/d42e03_986c311b71a3431db3ee2b7f7685df09~mv2.png",
   },
 
   // Lighting (placeholder — fill in if EcoBoom carries lighting)

@@ -1,6 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { site } from "@/data/site";
+import { images } from "@/data/images";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -33,11 +35,20 @@ export default function AboutPage() {
       <section className="container-page py-16 sm:py-24">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <div className="placeholder-image aspect-[4/5] w-full">
-              <span className="font-mono text-xs uppercase tracking-widest">
-                Portrait / crew photo
-              </span>
+            <div className="relative aspect-[4/5] w-full overflow-hidden">
+              <Image
+                src={images.bts.src}
+                alt={images.bts.alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 40vw"
+                className="object-cover"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ink/30" />
             </div>
+            <p className="mt-3 font-mono text-xs uppercase tracking-widest text-dust">
+              On location — hybrid power, quietly humming
+            </p>
           </div>
           <div className="md:col-span-7">
             <p className="eyebrow">Who we are</p>

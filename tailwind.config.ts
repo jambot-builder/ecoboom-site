@@ -19,10 +19,9 @@ const config: Config = {
         clayDeep: "#7E4632",    // hover state for clay
         cactus: "#697061",      // muted sage / dusty olive
         cactusDeep: "#4E5448",  // darker sage
-        // Brand green — from the EcoBoom logo wordmark.
-        // Adjust to the exact brand spec when confirmed.
-        ecoGreen: "#7DB23A",
-        ecoGreenDeep: "#5E8A28",
+        // Brand green — exact value from the EcoBoom logo wordmark.
+        ecoGreen: "#84BA40",
+        ecoGreenDeep: "#5C822D",
         ink: "#1A1612",         // primary text / dark sections
         smoke: "#4F4940",       // secondary text
         dust: "#8A8276",        // tertiary text, captions
@@ -33,6 +32,7 @@ const config: Config = {
         display: ["var(--font-display)", "Georgia", "serif"],
         body: ["var(--font-body)", "system-ui", "sans-serif"],
         mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+        wordmark: ["var(--font-wordmark)", "system-ui", "sans-serif"],
       },
       letterSpacing: {
         wider: "0.12em",

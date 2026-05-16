@@ -6,6 +6,10 @@ export type Service = {
   description: string;
   bullets: string[];
   href: string;
+  image?: {
+    src: string;
+    alt: string;
+  };
 };
 
 export const services: Service[] = [
@@ -24,6 +28,10 @@ export const services: Service[] = [
       "System tech and operator support available",
     ],
     href: "/services/audio",
+    image: {
+      src: "https://3ca9a566.delivery.rocketcdn.me/wp-content/uploads/2016/10/leopard-inuse.jpg.webp",
+      alt: "Meyer Sound LEOPARD line array deployed at a live event",
+    },
   },
   {
     slug: "power",
@@ -40,6 +48,10 @@ export const services: Service[] = [
       "Load calcs, distro, cable, and on-site power techs through showcall",
     ],
     href: "/services/power",
+    image: {
+      src: "https://static.wixstatic.com/media/d42e03_23a03d514df24d4a8abd1af738465ea1~mv2.png/v1/fill/w_1400,h_1050,al_c,q_85,enc_avif,quality_auto/d42e03_23a03d514df24d4a8abd1af738465ea1~mv2.png",
+      alt: "Hybrid battery system paired with a diesel generator on location",
+    },
   },
   {
     slug: "generators",
@@ -56,6 +68,10 @@ export const services: Service[] = [
       "Redundant configurations for high-stakes shows",
     ],
     href: "/services/generators",
+    image: {
+      src: "https://static.wixstatic.com/media/d42e03_986c311b71a3431db3ee2b7f7685df09~mv2.png/v1/fill/w_1400,h_1050,al_c,q_85,enc_avif,quality_auto/d42e03_986c311b71a3431db3ee2b7f7685df09~mv2.png",
+      alt: "CleanGen battery generator — 250 kWh, 900 amp output",
+    },
   },
   {
     slug: "film-production",
@@ -72,6 +88,10 @@ export const services: Service[] = [
       "Single point of contact through wrap",
     ],
     href: "/services/film-production",
+    image: {
+      src: "https://static.wixstatic.com/media/d42e03_e49262d21e5d4d548f1ee79fbcf9b49e~mv2.jpg/v1/fill/w_1400,h_1050,al_c,q_85,enc_avif,quality_auto/d42e03_e49262d21e5d4d548f1ee79fbcf9b49e~mv2.jpg",
+      alt: "Behind-the-scenes on a film set powered by hybrid systems",
+    },
   },
 ];
 
