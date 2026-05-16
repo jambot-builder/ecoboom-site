@@ -1,8 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { services } from "@/data/services";
 import { inventory } from "@/data/inventory";
 import { site } from "@/data/site";
+import DesertHero from "@/components/illustrations/DesertHero";
+import InventoryCard from "@/components/InventoryCard";
+import { images } from "@/data/images";
 
 export default function HomePage() {
   const featuredInventory = inventory.slice(0, 6);
@@ -36,13 +40,10 @@ export default function HomePage() {
           </div>
 
           <div className="md:col-span-5">
-            <div className="placeholder-image aspect-[4/5] w-full">
-              {/* Replace with a single, beautifully composed hero photo:
-                  desert dusk, stage being loaded in, or a clean shot of a
-                  ground-stacked rig in landscape. */}
-              <span className="font-mono text-xs uppercase tracking-widest">
-                Hero photo
-              </span>
+            {/* Hand-built SVG hero — Joshua tree desert horizon at dusk.
+                Swap to a real photograph here when one is available. */}
+            <div className="relative aspect-[4/5] w-full overflow-hidden">
+              <DesertHero className="absolute inset-0 h-full w-full" />
             </div>
             <p className="mt-3 font-mono text-xs uppercase tracking-widest text-dust">
               {site.contact.location} — serving the desert &amp; beyond
@@ -100,8 +101,20 @@ export default function HomePage() {
       </section>
 
       {/* ─────────── POWER DIFFERENTIATOR ─────────── */}
-      <section className="bg-ink text-bone">
-        <div className="container-page py-24 sm:py-32">
+      <section className="relative overflow-hidden bg-ink text-bone">
+        {/* Background image, dimmed */}
+        <Image
+          src={images.hybridSystem.src}
+          alt={images.hybridSystem.alt}
+          fill
+          sizes="100vw"
+          className="absolute inset-0 object-cover opacity-25 mix-blend-luminosity"
+          priority={false}
+        />
+        {/* Dark wash to keep text readable on top of the image */}
+        <div className="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40" />
+
+        <div className="relative container-page py-24 sm:py-32">
           <div className="grid items-start gap-12 md:grid-cols-12">
             <div className="md:col-span-4">
               <p className="text-eyebrow uppercase tracking-widest text-ecoGreen">
@@ -161,20 +174,7 @@ export default function HomePage() {
 
         <div className="mt-12 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
           {featuredInventory.map((item) => (
-            <article key={item.id} className="group">
-              <div className="placeholder-image aspect-[5/4] w-full">
-                <span className="font-mono text-[0.65rem] uppercase tracking-widest">
-                  {item.brand} · {item.name}
-                </span>
-              </div>
-              <p className="mt-5 font-mono text-xs uppercase tracking-widest text-dust">
-                {item.category}
-              </p>
-              <h3 className="mt-2 font-display text-xl leading-snug text-ink">
-                {item.brand} — {item.name}
-              </h3>
-              <p className="mt-2 text-sm text-smoke">{item.spec}</p>
-            </article>
+            <InventoryCard key={item.id} item={item} />
           ))}
         </div>
 

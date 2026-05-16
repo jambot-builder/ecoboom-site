@@ -3,6 +3,7 @@
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
+import InventoryCard from "./InventoryCard";
 import {
   inventory,
   categories,
@@ -59,23 +60,7 @@ export default function InventoryGrid() {
       ) : (
         <div className="mt-12 grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item) => (
-            <article key={item.id} className="group">
-              <div className="placeholder-image aspect-[5/4] w-full">
-                <span className="px-4 text-center font-mono text-[0.65rem] uppercase tracking-widest">
-                  {item.brand} · {item.name}
-                </span>
-              </div>
-              <p className="mt-5 font-mono text-xs uppercase tracking-widest text-dust">
-                {item.category}
-              </p>
-              <h3 className="mt-2 font-display text-xl leading-snug text-ink">
-                {item.brand} — {item.name}
-              </h3>
-              <p className="mt-2 text-sm text-smoke">{item.spec}</p>
-              {item.notes && (
-                <p className="mt-2 text-xs italic text-dust">{item.notes}</p>
-              )}
-            </article>
+            <InventoryCard key={item.id} item={item} />
           ))}
         </div>
       )}

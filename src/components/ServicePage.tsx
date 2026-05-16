@@ -1,6 +1,8 @@
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { services, type Service } from "@/data/services";
+import { LogoMark } from "./Logo";
 
 type Props = {
   service: Service;
@@ -28,10 +30,29 @@ export default function ServicePage({ service }: Props) {
       <section className="container-page py-16 sm:py-24">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-7">
-            <div className="placeholder-image aspect-[16/10] w-full">
-              <span className="font-mono text-xs uppercase tracking-widest">
-                {service.shortTitle} photo
-              </span>
+            <div className="relative aspect-[16/10] w-full overflow-hidden bg-sand/50">
+              {service.image ? (
+                <Image
+                  src={service.image.src}
+                  alt={service.image.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 60vw"
+                  className="object-cover"
+                  priority
+                />
+              ) : (
+                <div className="relative h-full w-full">
+                  <div className="absolute inset-0 bg-gradient-to-br from-stone/60 via-sand/40 to-bone" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-clay/10 to-cactus/15" />
+                  <div className="absolute inset-6 border border-ink/[0.06]" />
+                  <div className="absolute right-8 top-8 opacity-15">
+                    <LogoMark size={120} color="#1A1612" />
+                  </div>
+                  <p className="absolute bottom-6 left-6 font-mono text-xs uppercase tracking-widest text-smoke">
+                    {service.shortTitle}
+                  </p>
+                </div>
+              )}
             </div>
           </div>
           <div className="md:col-span-5">
