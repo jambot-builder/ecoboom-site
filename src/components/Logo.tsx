@@ -49,7 +49,7 @@ export default function Logo({
       <text
         x="0"
         y="82"
-        fontFamily='var(--font-wordmark), "Quicksand", system-ui, sans-serif'
+        fontFamily='"Quicksand", system-ui, sans-serif'
         fontWeight={700}
         fontSize="98"
         fill={ECO_GREEN}
@@ -68,7 +68,7 @@ export default function Logo({
       <text
         x="174"
         y="82"
-        fontFamily='var(--font-wordmark), "Quicksand", system-ui, sans-serif'
+        fontFamily='"Quicksand", system-ui, sans-serif'
         fontWeight={700}
         fontSize="98"
         fill={boomFill}
