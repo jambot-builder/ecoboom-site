@@ -90,9 +90,9 @@ export default function AboutPage() {
                 turnaround possible when it needs to happen.
               </p>
               <p>
-                For productions coming into the desert &mdash; whether
+                For productions coming into the desert  -  whether
                 that&rsquo;s a feature shoot, a brand activation, a fashion
-                week, or a music festival &mdash; we&rsquo;re the local who
+                week, or a music festival  -  we&rsquo;re the local who
                 already knows the venue, the permits, and the people.
               </p>
             </div>
@@ -105,7 +105,7 @@ export default function AboutPage() {
           <p className="eyebrow text-center">What we believe</p>
           <p className="mt-8 font-display text-3xl italic leading-snug text-ink sm:text-4xl">
             Productions can be powered cleanly without losing reliability.
-            That&rsquo;s the whole point of EcoBoom &mdash; not a marketing
+            That&rsquo;s the whole point of EcoBoom  -  not a marketing
             angle, but the way we actually run the work.
           </p>
           <div className="mt-12 space-y-6 text-lg leading-relaxed text-smoke">
