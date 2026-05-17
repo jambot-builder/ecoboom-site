@@ -109,18 +109,16 @@ export function LogoMark({
 }) {
   return (
     <svg
-      viewBox="0 0 70 56"
+      viewBox="0 0 56 56"
       width={size}
-      height={(size * 56) / 70}
+      height={size}
       role="img"
       aria-label="EcoBoom mark"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <g fill="none" stroke={color} strokeWidth="7" strokeLinejoin="round">
-        <rect x="4" y="4" width="62" height="48" rx="14" />
-        <rect x="20" y="16" width="30" height="24" rx="6" />
-      </g>
+      <rect width="56" height="56" rx="12" fill={color} />
+      <circle cx="28" cy="28" r="14" fill="currentColor" />
     </svg>
   );
 }
