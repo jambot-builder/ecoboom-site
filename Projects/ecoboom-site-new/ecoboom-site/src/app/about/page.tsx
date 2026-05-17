@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "EcoBoom is a high-desert rental house for film, festival, and live production — built on years of event power and audio expertise.",
+    "EcoBoom is a high-desert rental house for film, festival, and live production - built on years of event power and audio expertise.",
 };
 
 export default function AboutPage() {
@@ -43,7 +43,7 @@ export default function AboutPage() {
             <p className="eyebrow">Who we are</p>
             <div className="mt-6 space-y-6 text-lg leading-relaxed text-smoke">
               <p>
-                We grew up doing this work — building stages, sizing
+                We grew up doing this work - building stages, sizing
                 generators, designing audio rigs, troubleshooting power at 2am
                 when the show had to go on. EcoBoom was born out of years of
                 doing that at the highest level for the productions that come
@@ -71,17 +71,17 @@ export default function AboutPage() {
             </div>
             <div className="md:col-span-8 space-y-6 text-lg leading-relaxed text-stone/90">
               <p>
-                We&rsquo;re based in the High Desert — Yucca Valley and Joshua
-                Tree country — and the bulk of our work runs the corridor
+                We&rsquo;re based in the High Desert - Yucca Valley and Joshua
+                Tree country - and the bulk of our work runs the corridor
                 from Los Angeles down to the Coachella Valley. We&rsquo;re a
                 short call from Palm Springs, Indio, and the festival grounds,
                 and we&rsquo;re close enough to L.A. to make a same-day
                 turnaround possible when it needs to happen.
               </p>
               <p>
-                For productions coming into the desert &mdash; whether
+                For productions coming into the desert  -  whether
                 that&rsquo;s a feature shoot, a brand activation, a fashion
-                week, or a music festival &mdash; we&rsquo;re the local who
+                week, or a music festival  -  we&rsquo;re the local who
                 already knows the venue, the permits, and the people.
               </p>
             </div>

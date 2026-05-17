@@ -52,14 +52,14 @@ export async function POST(req: Request) {
 
   try {
     const result = await sendQuoteEmail(payload);
-    return NextResponse.json({ ok: true, ...result });
+    return NextResponse.json({ ...result });
   } catch (err) {
     console.error("Quote send failed:", err);
     return NextResponse.json(
       {
         ok: false,
         message:
-          "We couldn't send that just now. Please email us directly — we'll get right back.",
+          "We couldn't send that just now. Please email us directly - we'll get right back.",
       },
       { status: 500 }
     );

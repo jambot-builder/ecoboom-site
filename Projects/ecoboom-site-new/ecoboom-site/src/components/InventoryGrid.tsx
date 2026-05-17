@@ -53,7 +53,7 @@ export default function InventoryGrid() {
 
       {items.length === 0 ? (
         <p className="mt-12 text-smoke">
-          Nothing in that category yet — get in touch and we&rsquo;ll see what
+          Nothing in that category yet - get in touch and we&rsquo;ll see what
           we can source.
         </p>
       ) : (
@@ -69,7 +69,7 @@ export default function InventoryGrid() {
                 {item.category}
               </p>
               <h3 className="mt-2 font-display text-xl leading-snug text-ink">
-                {item.brand} — {item.name}
+                {item.brand} - {item.name}
               </h3>
               <p className="mt-2 text-sm text-smoke">{item.spec}</p>
               {item.notes && (

@@ -16,7 +16,7 @@ export default function InventoryPage() {
           The catalog.
         </h1>
         <p className="mt-8 max-w-prose text-lg leading-relaxed text-smoke">
-          A working list of what we own — audio packages, generators, distro,
+          A working list of what we own - audio packages, generators, distro,
           and the bits in between. For anything you need that&rsquo;s not on
           here, ask us. Quantities, photos, and the full spec sheets are
           available on request.

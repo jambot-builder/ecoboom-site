@@ -42,7 +42,7 @@ export default function ServicePage({ service }: Props) {
                   key={b}
                   className="flex items-baseline gap-3 border-b border-line/60 pb-4 last:border-0"
                 >
-                  <span className="font-mono text-[0.65rem] text-clay">—</span>
+                  <span className="font-mono text-[0.65rem] text-clay">-</span>
                   <span className="leading-relaxed">{b}</span>
                 </li>
               ))}

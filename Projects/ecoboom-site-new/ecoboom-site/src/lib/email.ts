@@ -2,7 +2,7 @@
  * Email helper for outbound quote requests.
  *
  * Uses Resend (resend.com) when RESEND_API_KEY is set. Otherwise it logs the
- * submission to the server console — useful for local dev before Resend
+ * submission to the server console - useful for local dev before Resend
  * is wired up.
  */
 export type QuotePayload = {
@@ -24,7 +24,7 @@ export async function sendQuoteEmail(payload: QuotePayload) {
   const from = process.env.QUOTE_FROM_EMAIL || "quotes@ecoboom.org";
   const apiKey = process.env.RESEND_API_KEY;
 
-  const subject = `New quote request — ${payload.name}${
+  const subject = `New quote request - ${payload.name}${
     payload.company ? ` (${payload.company})` : ""
   }`;
 
@@ -32,7 +32,7 @@ export async function sendQuoteEmail(payload: QuotePayload) {
 
   // Dev fallback: no API key configured.
   if (!apiKey || !recipient) {
-    console.log("\n=== Quote request (no email sent — missing env) ===");
+    console.log("\n=== Quote request (no email sent - missing env) ===");
     console.log("To:", recipient || "(QUOTE_RECIPIENT_EMAIL not set)");
     console.log("Subject:", subject);
     console.log(body);

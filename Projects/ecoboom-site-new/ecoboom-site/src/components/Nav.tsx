@@ -15,7 +15,7 @@ export default function Nav() {
         <Link
           href="/"
           className="font-display text-xl tracking-wide text-ink"
-          aria-label={`${site.name} — home`}
+          aria-label={`${site.name} - home`}
         >
           {site.name}
           <span className="ml-2 text-clay">·</span>
@@ -36,7 +36,7 @@ export default function Nav() {
           </ul>
         </nav>
 
-        {/* Mobile: keep simple — link to quote directly. */}
+        {/* Mobile: keep simple - link to quote directly. */}
         <div className="md:hidden">
           <Link
             href="/quote"

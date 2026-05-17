@@ -45,7 +45,7 @@ export default function HomePage() {
               </span>
             </div>
             <p className="mt-3 font-mono text-xs uppercase tracking-widest text-dust">
-              {site.contact.location} — serving the desert &amp; beyond
+              {site.contact.location} - serving the desert &amp; beyond
             </p>
           </div>
         </div>
@@ -65,7 +65,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-6 max-w-prose text-smoke">
               We&rsquo;re a boutique rental house. We don&rsquo;t try to be
-              everything to everyone — we&rsquo;re focused on the categories
+              everything to everyone - we&rsquo;re focused on the categories
               where deep expertise actually changes the outcome.
             </p>
           </div>
@@ -163,7 +163,7 @@ export default function HomePage() {
                 {item.category}
               </p>
               <h3 className="mt-2 font-display text-xl leading-snug text-ink">
-                {item.brand} — {item.name}
+                {item.brand} - {item.name}
               </h3>
               <p className="mt-2 text-sm text-smoke">{item.spec}</p>
             </article>
@@ -188,7 +188,7 @@ export default function HomePage() {
             <p className="eyebrow">{site.credibility.headline}</p>
             <p className="mt-8 font-display text-3xl italic leading-snug text-ink sm:text-4xl">
               &ldquo;We don&rsquo;t just rent gear. We&rsquo;re the people you
-              call when the show has to happen — and you need someone who knows
+              call when the show has to happen - and you need someone who knows
               the desert, knows the gear, and knows how to make it land.&rdquo;
             </p>
             <p className="mt-8 font-mono text-xs uppercase tracking-widest text-dust">

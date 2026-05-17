@@ -9,13 +9,13 @@ export const site = {
   tagline: "Event partners for film, music, and live production.",
   domain: "ecoboom.org",
 
-  // PLACEHOLDER — replace with the real business contact info.
+  // PLACEHOLDER - replace with the real business contact info.
   contact: {
     email: "hello@ecoboom.org",
     phone: "(760) 555-0100",
     location: "Yucca Valley, CA",
     serviceArea:
-      "High Desert + Low Desert — Joshua Tree, Yucca Valley, Palm Springs, Coachella Valley, Los Angeles basin.",
+      "High Desert + Low Desert - Joshua Tree, Yucca Valley, Palm Springs, Coachella Valley, Los Angeles basin.",
   },
 
   social: {
@@ -27,7 +27,7 @@ export const site = {
     short:
       "Audio, generators, and event power for productions in the California desert and beyond.",
     long:
-      "EcoBoom is a high-desert boutique rental house serving film, television, and live event productions. We supply ground-stacked PA systems from QSC, L-Acoustics, Meyer, and VUE Audiotechnik, alongside generators, distro, and the full kit you need to put on a show — paired with deep expertise in temporary and event power.",
+      "EcoBoom is a high-desert boutique rental house serving film, television, and live event productions. We supply ground-stacked PA systems from QSC, L-Acoustics, Meyer, and VUE Audiotechnik, alongside generators, distro, and the full kit you need to put on a show - paired with deep expertise in temporary and event power.",
   },
 
   // Used in the home page "credibility" strip. Replace with real partners once

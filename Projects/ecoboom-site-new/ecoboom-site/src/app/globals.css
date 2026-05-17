@@ -13,7 +13,7 @@
 
   body {
     @apply min-h-screen;
-    /* Very subtle paper texture — kept extremely low opacity so it reads as
+    /* Very subtle paper texture - kept extremely low opacity so it reads as
        warmth rather than noise. */
     background-image: radial-gradient(
       circle at 20% 0%,
@@ -59,7 +59,7 @@
     @apply h-px w-full bg-line;
   }
 
-  /* Image placeholder block — used wherever we'll drop a real photo later.
+  /* Image placeholder block - used wherever we'll drop a real photo later.
      Reads as a calm sand surface rather than a loud "image goes here" box. */
   .placeholder-image {
     @apply relative flex items-center justify-center overflow-hidden

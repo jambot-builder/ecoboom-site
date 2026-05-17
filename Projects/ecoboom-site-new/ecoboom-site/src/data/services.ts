@@ -32,7 +32,7 @@ export const services: Service[] = [
     blurb:
       "The expertise gap most rental houses can't fill. We design, deliver, and run the power your production depends on.",
     description:
-      "Temporary power is what we do best. We size loads, lay out distro, ground rigs properly, and stand on site with you through the show. Whether the call is for quiet film-shoot power, festival main stage redundancy, or bridge power to a remote location, we plan it like the production depends on it — because it does.",
+      "Temporary power is what we do best. We size loads, lay out distro, ground rigs properly, and stand on site with you through the show. Whether the call is for quiet film-shoot power, festival main stage redundancy, or bridge power to a remote location, we plan it like the production depends on it - because it does.",
     bullets: [
       "Load calcs, single-line diagrams, and site power plans",
       "Generators, distro, cable, and grounding",
@@ -46,7 +46,7 @@ export const services: Service[] = [
     shortTitle: "Generators",
     title: "Generators",
     blurb:
-      "Diesel and battery generator rentals sized to the job — from a single tow-behind to a fully redundant festival package.",
+      "Diesel and battery generator rentals sized to the job - from a single tow-behind to a fully redundant festival package.",
     description:
       "We rent generators across the size range needed by modern productions, with the cabling, distro, and operator support to make them actually useful. We're fluent in clean / quiet power requirements for film sets and battery-first solutions where emissions matter.",
     bullets: [
@@ -62,9 +62,9 @@ export const services: Service[] = [
     shortTitle: "Film & Festival",
     title: "Film, Festival & Production Support",
     blurb:
-      "We know what film crews and festival productions need — because we've been on those calls for years.",
+      "We know what film crews and festival productions need - because we've been on those calls for years.",
     description:
-      "We're set up to be the partner you can call once and have it handled. Coachella and Stagecoach weeks, indie film shoots up in Joshua Tree, fashion brand activations in Palm Springs — we know the rhythms, the permits, the load-in windows, and the people. Bring us in early and we'll save you headaches.",
+      "We're set up to be the partner you can call once and have it handled. Coachella and Stagecoach weeks, indie film shoots up in Joshua Tree, fashion brand activations in Palm Springs - we know the rhythms, the permits, the load-in windows, and the people. Bring us in early and we'll save you headaches.",
     bullets: [
       "Pre-production load and logistics planning",
       "Coachella Valley + High Desert expertise",

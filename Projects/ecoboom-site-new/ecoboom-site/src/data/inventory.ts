@@ -1,5 +1,5 @@
 /**
- * Inventory catalog. This is placeholder seed data — the real gear list,
+ * Inventory catalog. This is placeholder seed data - the real gear list,
  * quantities, photos, and pricing should replace these entries before launch.
  *
  * Each item lists brand + model so the categories are concrete. "spec" is a
@@ -120,18 +120,18 @@ export const inventory: InventoryItem[] = [
     name: "Battery Generator (Mid)",
     brand: "Portable Electric",
     category: "Generators",
-    spec: "Zero-emission, near-silent — for film sets and indoor activations.",
+    spec: "Zero-emission, near-silent - for film sets and indoor activations.",
     notes: "Specific model TBD based on availability.",
   },
 
-  // Lighting (placeholder — fill in if EcoBoom carries lighting)
+  // Lighting (placeholder - fill in if EcoBoom carries lighting)
   {
     id: "light-tower-led",
     name: "LED Light Tower",
     brand: "Various",
     category: "Lighting",
     spec: "Trailer-mounted, battery or solar/diesel hybrid.",
-    notes: "PLACEHOLDER — confirm if EcoBoom rents lighting.",
+    notes: "PLACEHOLDER - confirm if EcoBoom rents lighting.",
   },
 ];
 

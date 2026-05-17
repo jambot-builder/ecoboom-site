@@ -26,7 +26,7 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} — ${site.tagline}`,
+    default: `${site.name} - ${site.tagline}`,
     template: `%s · ${site.name}`,
   },
   description: site.positioning.short,
