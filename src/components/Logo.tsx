@@ -1,15 +1,8 @@
 import Link from "next/link";
 
 /**
- * EcoBoom logo - built as inline SVG.
- *
- * The wordmark uses Quicksand (rounded geometric sans, loaded via next/font),
- * which most closely matches the actual EcoBoom letterforms. The target icon
- * is drawn as two concentric rounded squares in eco-green.
- *
- * Variants:
- *   - "light" - for use on bone/cream backgrounds (default)
- *   - "dark"  - for use on ink/dark backgrounds; "boom" text becomes cream
+ * EcoBoom logo - Recreated from reference photo.
+ * "eco" in green, white "b" in green box, "oom" in black.
  */
 type Variant = "light" | "dark";
 
@@ -20,7 +13,7 @@ type Props = {
   height?: number;
 };
 
-const ECO_GREEN = "#84BA40";
+const ECO_GREEN = "#86BC41";
 const INK = "#1A1612";
 const BONE = "#FAF6EE";
 
@@ -31,9 +24,10 @@ export default function Logo({
   height = 36,
 }: Props) {
   const boomFill = variant === "dark" ? BONE : INK;
-  // viewBox tuned so wordmark "eco○boom" sits comfortably with the target.
-  const W = 380;
-  const H = 110;
+  
+  // Adjusted width/height to fit the new wordmark structure
+  const W = 320;
+  const H = 80;
 
   const inner = (
     <svg
@@ -45,36 +39,29 @@ export default function Logo({
       xmlns="http://www.w3.org/2000/svg"
       style={{ display: "block" }}
     >
-      {/* "ec" - green */}
-      <text
-        x="0"
-        y="82"
-        fontFamily='"Quicksand", system-ui, sans-serif'
-        fontWeight={700}
-        fontSize="98"
-        fill={ECO_GREEN}
-        letterSpacing="-3"
-      >
-        ec
+      <style>{`
+        .logo-text { 
+          font-family: "Montserrat", "Inter", system-ui, sans-serif; 
+          font-weight: 700; 
+          font-size: 64px; 
+          letter-spacing: -2px; 
+        }
+      `}</style>
+
+      {/* "eco" - green */}
+      <text x="0" y="60" fill={ECO_GREEN} className="logo-text">
+        eco
       </text>
 
-      {/* The "o" icon - solid green rounded square with a hole (the o) */}
-      <g transform="translate(98 30)">
-        <rect x="0" y="0" width="56" height="56" rx="12" fill={ECO_GREEN} />
-        <circle cx="28" cy="28" r="14" fill={variant === "dark" ? INK : BONE} />
-      </g>
+      {/* Green box with white "b" */}
+      <rect x="110" y="8" width="64" height="64" fill={ECO_GREEN} rx="4" />
+      <text x="124" y="60" fill={variant === "dark" ? INK : BONE} className="logo-text">
+        b
+      </text>
 
-      {/* "boom" - black on light, cream on dark */}
-      <text
-        x="174"
-        y="82"
-        fontFamily='"Quicksand", system-ui, sans-serif'
-        fontWeight={700}
-        fontSize="98"
-        fill={boomFill}
-        letterSpacing="-3"
-      >
-        boom
+      {/* "oom" - black on light, cream on dark */}
+      <text x="184" y="60" fill={boomFill} className="logo-text">
+        oom
       </text>
     </svg>
   );
@@ -94,10 +81,6 @@ export default function Logo({
   );
 }
 
-/**
- * Standalone target mark (the bracketed-rect icon without the wordmark).
- * Used for favicon-like uses or as a decorative accent.
- */
 export function LogoMark({
   size = 36,
   color = ECO_GREEN,
@@ -109,7 +92,7 @@ export function LogoMark({
 }) {
   return (
     <svg
-      viewBox="0 0 56 56"
+      viewBox="0 0 64 64"
       width={size}
       height={size}
       role="img"
@@ -117,8 +100,19 @@ export function LogoMark({
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <rect width="56" height="56" rx="12" fill={color} />
-      <circle cx="28" cy="28" r="14" fill="currentColor" />
+      <rect width="64" height="64" rx="8" fill={color} />
+      <text 
+        x="16" 
+        y="48" 
+        fill="white" 
+        style={{ 
+          fontFamily: "Montserrat, Inter, sans-serif", 
+          fontWeight: 700, 
+          fontSize: "48px" 
+        }}
+      >
+        b
+      </text>
     </svg>
   );
 }
