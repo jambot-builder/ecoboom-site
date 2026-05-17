@@ -44,7 +44,7 @@ export const services: Service[] = [
     bullets: [
       "Hybrid battery + diesel piggyback systems",
       "~90% average fuel reduction across our deployments",
-      "Quieter sets and lower emissions — without sacrificing uptime",
+      "Quieter sets and lower emissions - without sacrificing uptime",
       "Load calcs, distro, cable, and on-site power techs through showcall",
     ],
     href: "/services/power",
@@ -58,7 +58,7 @@ export const services: Service[] = [
     shortTitle: "Generators",
     title: "Generators",
     blurb:
-      "Diesel and battery generator rentals sized to the job — from a single tow-behind to a fully redundant festival package.",
+      "Diesel and battery generator rentals sized to the job - from a single tow-behind to a fully redundant festival package.",
     description:
       "We rent generators across the size range needed by modern productions, with the cabling, distro, and operator support to make them actually useful. We're fluent in clean / quiet power requirements for film sets and battery-first solutions where emissions matter.",
     bullets: [
@@ -70,7 +70,7 @@ export const services: Service[] = [
     href: "/services/generators",
     image: {
       src: "https://static.wixstatic.com/media/d42e03_986c311b71a3431db3ee2b7f7685df09~mv2.png/v1/fill/w_1400,h_1050,al_c,q_85,enc_avif,quality_auto/d42e03_986c311b71a3431db3ee2b7f7685df09~mv2.png",
-      alt: "CleanGen battery generator — 250 kWh, 900 amp output",
+      alt: "CleanGen battery generator - 250 kWh, 900 amp output",
     },
   },
   {
@@ -78,9 +78,9 @@ export const services: Service[] = [
     shortTitle: "Film & Festival",
     title: "Film, Festival & Production Support",
     blurb:
-      "We know what film crews and festival productions need — because we've been on those calls for years.",
+      "We know what film crews and festival productions need - because we've been on those calls for years.",
     description:
-      "We're set up to be the partner you can call once and have it handled. Coachella and Stagecoach weeks, indie film shoots up in Joshua Tree, fashion brand activations in Palm Springs — we know the rhythms, the permits, the load-in windows, and the people. Bring us in early and we'll save you headaches.",
+      "We're set up to be the partner you can call once and have it handled. Coachella and Stagecoach weeks, indie film shoots up in Joshua Tree, fashion brand activations in Palm Springs - we know the rhythms, the permits, the load-in windows, and the people. Bring us in early and we'll save you headaches.",
     bullets: [
       "Pre-production load and logistics planning",
       "Coachella Valley + High Desert expertise",

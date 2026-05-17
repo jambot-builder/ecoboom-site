@@ -1,13 +1,13 @@
 import Link from "next/link";
 
 /**
- * EcoBoom logo — built as inline SVG so it renders perfectly with no
+ * EcoBoom logo - built as inline SVG so it renders perfectly with no
  * external asset dependency. The wordmark uses Nunito (loaded via next/font)
  * for a rounded geometric feel close to the original letterforms.
  *
  * Two visual variants:
- *   - "light" — for use on bone/cream backgrounds (default)
- *   - "dark"  — for use on ink/dark backgrounds; the "boom" text gets a
+ *   - "light" - for use on bone/cream backgrounds (default)
+ *   - "dark"  - for use on ink/dark backgrounds; the "boom" text gets a
  *               cream stroke so it stands out from the dark background
  */
 type Variant = "light" | "dark";
@@ -45,7 +45,7 @@ export default function Logo({
       xmlns="http://www.w3.org/2000/svg"
       style={{ display: "block" }}
     >
-      {/* "ec" — green */}
+      {/* "ec" - green */}
       <text
         x="0"
         y="76"
@@ -58,13 +58,13 @@ export default function Logo({
         ec
       </text>
 
-      {/* Target icon — replaces the "o" in eco. Two nested rounded rects. */}
+      {/* Target icon - replaces the "o" in eco. Two nested rounded rects. */}
       <g transform="translate(94 28)" fill="none" stroke={ECO_GREEN} strokeWidth="7">
         <rect x="0" y="0" width="58" height="48" rx="14" />
         <rect x="15" y="12" width="28" height="24" rx="6" />
       </g>
 
-      {/* "boom" — black on light, cream on dark */}
+      {/* "boom" - black on light, cream on dark */}
       <text
         x="160"
         y="76"
@@ -84,7 +84,7 @@ export default function Logo({
   }
 
   return (
-    <Link href="/" aria-label="EcoBoom — home" className={`inline-flex ${className}`}>
+    <Link href="/" aria-label="EcoBoom - home" className={`inline-flex ${className}`}>
       {inner}
     </Link>
   );

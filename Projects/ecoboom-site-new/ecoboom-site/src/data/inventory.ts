@@ -1,5 +1,5 @@
 /**
- * Inventory catalog. This is placeholder seed data — the real gear list,
+ * Inventory catalog. This is placeholder seed data - the real gear list,
  * quantities, photos, and pricing should replace these entries before launch.
  *
  * Each item lists brand + model so the categories are concrete. "spec" is a
@@ -65,7 +65,7 @@ export const inventory: InventoryItem[] = [
     name: "TIGRA Medium-Format Line Array",
     brand: "Meyer Sound",
     category: "Audio",
-    spec: "Right-sized line array — PANTHER-level output and headroom in a smaller, faster-rigging cabinet.",
+    spec: "Right-sized line array - PANTHER-level output and headroom in a smaller, faster-rigging cabinet.",
     image:
       "https://meyersound.com/wp-content/uploads/2026/03/tigra_main.jpg.webp",
   },
@@ -83,7 +83,7 @@ export const inventory: InventoryItem[] = [
     name: "1800-LFC Medium-Format Subwoofer",
     brand: "Meyer Sound",
     category: "Audio",
-    spec: "Deep, controlled bass — 30 Hz to 125 Hz with the authority of larger systems in a lighter footprint.",
+    spec: "Deep, controlled bass - 30 Hz to 125 Hz with the authority of larger systems in a lighter footprint.",
     image:
       "https://3ca9a566.delivery.rocketcdn.me/wp-content/uploads/2026/03/1800-lfc_main.jpg.webp",
   },
@@ -92,7 +92,7 @@ export const inventory: InventoryItem[] = [
     name: "ULTRA-X80 Point Source",
     brand: "Meyer Sound",
     category: "Audio",
-    spec: "Pound-for-pound Meyer's most powerful point source — replaces a small line array in a single box.",
+    spec: "Pound-for-pound Meyer's most powerful point source - replaces a small line array in a single box.",
     image:
       "https://meyersound.com/wp-content/uploads/2024/05/250522_ultra-x80_main_image_b.jpg.webp",
   },
@@ -156,18 +156,18 @@ export const inventory: InventoryItem[] = [
     name: "CleanGen 250 kWh Battery Generator",
     brand: "EcoBoom Fleet",
     category: "Generators",
-    spec: "250 kWh, 900 amps. Zero-emission, near-silent — the workhorse of our hybrid deployments.",
+    spec: "250 kWh, 900 amps. Zero-emission, near-silent - the workhorse of our hybrid deployments.",
     image: "/images/rebrand/cleangen-250-rebrand.jpg",
   },
 
-  // Lighting (placeholder — fill in if EcoBoom carries lighting)
+  // Lighting (placeholder - fill in if EcoBoom carries lighting)
   {
     id: "light-tower-led",
     name: "LED Light Tower",
     brand: "Various",
     category: "Lighting",
     spec: "Trailer-mounted, battery or solar/diesel hybrid.",
-    notes: "PLACEHOLDER — confirm if EcoBoom rents lighting.",
+    notes: "PLACEHOLDER - confirm if EcoBoom rents lighting.",
   },
 ];
 

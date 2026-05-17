@@ -29,7 +29,7 @@ export default function Nav() {
           </ul>
         </nav>
 
-        {/* Mobile: keep simple — link to quote directly. */}
+        {/* Mobile: keep simple - link to quote directly. */}
         <div className="md:hidden">
           <Link
             href="/quote"

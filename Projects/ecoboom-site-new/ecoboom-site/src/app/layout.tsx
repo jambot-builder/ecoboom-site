@@ -24,7 +24,7 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-// Used by the Logo component for the wordmark. Rounded geometric sans —
+// Used by the Logo component for the wordmark. Rounded geometric sans -
 // close to the original EcoBoom hand-built letterforms.
 const wordmark = Nunito({
   subsets: ["latin"],
@@ -35,7 +35,7 @@ const wordmark = Nunito({
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} — ${site.tagline}`,
+    default: `${site.name} - ${site.tagline}`,
     template: `%s · ${site.name}`,
   },
   description: site.positioning.short,

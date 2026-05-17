@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Audio, event power, generators, and production support — designed for the California desert and the productions that come through it.",
+    "Audio, event power, generators, and production support - designed for the California desert and the productions that come through it.",
 };
 
 export default function ServicesPage() {
@@ -53,7 +53,7 @@ export default function ServicesPage() {
                     {s.bullets.slice(0, 3).map((b) => (
                       <li
                         key={b}
-                        className="flex items-baseline gap-3 before:font-mono before:text-[0.65rem] before:text-clay before:content-['—']"
+                        className="flex items-baseline gap-3 before:font-mono before:text-[0.65rem] before:text-clay before:content-['-']"
                       >
                         <span>{b}</span>
                       </li>

@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "EcoBoom is a high-desert rental house for film, festival, and live production — built on years of event power and audio expertise.",
+    "EcoBoom is a high-desert rental house for film, festival, and live production - built on years of event power and audio expertise.",
 };
 
 export default function AboutPage() {
@@ -47,14 +47,14 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ink/30" />
             </div>
             <p className="mt-3 font-mono text-xs uppercase tracking-widest text-dust">
-              On location — hybrid power, quietly humming
+              On location - hybrid power, quietly humming
             </p>
           </div>
           <div className="md:col-span-7">
             <p className="eyebrow">Who we are</p>
             <div className="mt-6 space-y-6 text-lg leading-relaxed text-smoke">
               <p>
-                We grew up doing this work — building stages, sizing
+                We grew up doing this work - building stages, sizing
                 generators, designing audio rigs, troubleshooting power at 2am
                 when the show had to go on. EcoBoom was born out of years of
                 doing that at the highest level for the productions that come
@@ -82,8 +82,8 @@ export default function AboutPage() {
             </div>
             <div className="md:col-span-8 space-y-6 text-lg leading-relaxed text-stone/90">
               <p>
-                We&rsquo;re based in the High Desert — Yucca Valley and Joshua
-                Tree country — and the bulk of our work runs the corridor
+                We&rsquo;re based in the High Desert - Yucca Valley and Joshua
+                Tree country - and the bulk of our work runs the corridor
                 from Los Angeles down to the Coachella Valley. We&rsquo;re a
                 short call from Palm Springs, Indio, and the festival grounds,
                 and we&rsquo;re close enough to L.A. to make a same-day

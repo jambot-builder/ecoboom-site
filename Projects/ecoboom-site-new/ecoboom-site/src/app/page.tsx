@@ -40,13 +40,13 @@ export default function HomePage() {
           </div>
 
           <div className="md:col-span-5">
-            {/* Hand-built SVG hero — Joshua tree desert horizon at dusk.
+            {/* Hand-built SVG hero - Joshua tree desert horizon at dusk.
                 Swap to a real photograph here when one is available. */}
             <div className="relative aspect-[4/5] w-full overflow-hidden">
               <DesertHero className="absolute inset-0 h-full w-full" />
             </div>
             <p className="mt-3 font-mono text-xs uppercase tracking-widest text-dust">
-              {site.contact.location} — serving the desert &amp; beyond
+              {site.contact.location} - serving the desert &amp; beyond
             </p>
           </div>
         </div>
@@ -66,7 +66,7 @@ export default function HomePage() {
             </h2>
             <p className="mt-6 max-w-prose text-smoke">
               We&rsquo;re a boutique rental house. We don&rsquo;t try to be
-              everything to everyone — we&rsquo;re focused on the categories
+              everything to everyone - we&rsquo;re focused on the categories
               where deep expertise actually changes the outcome.
             </p>
           </div>
@@ -128,7 +128,7 @@ export default function HomePage() {
               </h2>
               <p className="mt-8 max-w-prose text-lg leading-relaxed text-stone/90">
                 We piggyback massive battery systems onto our generators. The
-                show runs almost entirely off stored energy — the diesel only
+                show runs almost entirely off stored energy - the diesel only
                 fires when the batteries need a top-up. The result is a
                 quieter set, dramatically lower emissions, and an average
                 fuel reduction of ninety percent across our deployments.
@@ -196,7 +196,7 @@ export default function HomePage() {
             <p className="eyebrow">{site.credibility.headline}</p>
             <p className="mt-8 font-display text-3xl italic leading-snug text-ink sm:text-4xl">
               &ldquo;We don&rsquo;t just rent gear. We&rsquo;re the people you
-              call when the show has to happen — and you need someone who knows
+              call when the show has to happen - and you need someone who knows
               the desert, knows the gear, and knows how to make it land.&rdquo;
             </p>
             <p className="mt-8 font-mono text-xs uppercase tracking-widest text-dust">

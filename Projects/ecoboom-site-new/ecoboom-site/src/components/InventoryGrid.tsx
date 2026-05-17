@@ -54,7 +54,7 @@ export default function InventoryGrid() {
 
       {items.length === 0 ? (
         <p className="mt-12 text-smoke">
-          Nothing in that category yet — get in touch and we&rsquo;ll see what
+          Nothing in that category yet - get in touch and we&rsquo;ll see what
           we can source.
         </p>
       ) : (
