@@ -12,14 +12,14 @@ export const site = {
   // PLACEHOLDER - replace with the real business contact info.
   contact: {
     email: "hello@ecoboom.org",
-    phone: "(760) 555-0100",
+    phone: "(310) 905-4683",
     location: "Yucca Valley, CA",
     serviceArea:
       "California - Yucca Valley HQ, serving Palm Springs, Coachella Valley, Los Angeles basin, and beyond.",
   },
 
   social: {
-    instagram: "https://www.instagram.com/", // PLACEHOLDER
+    instagram: "https://www.instagram.com/ecoboom/",
     linkedin: "https://www.linkedin.com/",   // PLACEHOLDER
   },
 
