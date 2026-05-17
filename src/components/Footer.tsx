@@ -8,8 +8,7 @@ export default function Footer() {
       <div className="container-page py-16">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
-            <Logo variant="light" height={36} withLink={false} />
-            <p className="mt-6 max-w-prose text-smoke">
+            <p className="max-w-prose text-smoke">
               {site.positioning.short}
             </p>
           </div>
