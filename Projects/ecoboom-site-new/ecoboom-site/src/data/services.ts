@@ -38,9 +38,9 @@ export const services: Service[] = [
     shortTitle: "Hybrid Power",
     title: "Hybrid Event Power",
     blurb:
-      "We piggyback massive battery systems onto our generators. The diesel only fires when the batteries need a top-up — productions run on ~90% less fuel, with the same uptime.",
+      "We piggyback massive battery systems onto our generators. The diesel only fires when the batteries need a top-up - productions run on ~90% less fuel, with the same uptime.",
     description:
-      "Most rental houses hand you a diesel generator and walk away. We design hybrid power systems — battery banks paired with smart diesel generators — so the show runs almost entirely off stored energy. The diesel piggybacks in only to recharge when it's needed. Less fuel burned, far less noise on set, dramatically lower emissions, and a real cost savings on long shoot days and festival runs. Same reliability. Way less waste.",
+      "Most rental houses hand you a diesel generator and walk away. We design hybrid power systems - battery banks paired with smart diesel generators - so the show runs almost entirely off stored energy. The diesel piggybacks in only to recharge when it's needed. Less fuel burned, far less noise on set, dramatically lower emissions, and a real cost savings on long shoot days and festival runs. Same reliability. Way less waste.",
     bullets: [
       "Hybrid battery + diesel piggyback systems",
       "~90% average fuel reduction across our deployments",
