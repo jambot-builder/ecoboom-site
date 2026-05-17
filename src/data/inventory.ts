@@ -146,8 +146,7 @@ export const inventory: InventoryItem[] = [
     brand: "REON",
     category: "Battery",
     spec: "Mobile power station for film sets, brand activations, and remote locations.",
-    image: `${WIX}/d42e03_b40d749f5a23458fa62e12c870ea1662~mv2.png/v1/fill/w_900,h_675,al_c,q_85,enc_avif,quality_auto/Saniset-Fleet-Reon%20white%20bg.png`,
-    needsRebrand: true,
+    image: "/images/rebrand/battery-reon.jpg",
   },
   {
     id: "battery-suncase-5kwh",
@@ -181,8 +180,7 @@ export const inventory: InventoryItem[] = [
     brand: "EODev",
     category: "Hydrogen",
     spec: "Zero-emission hydrogen fuel cell power generator. Silent, clean, and production-grade.",
-    image: `${WIX}/d42e03_fb065e8dc8944e70a4547a356a5a2ec5~mv2.png/v1/fill/w_900,h_675,al_c,q_85,enc_avif,quality_auto/Hydrogen%20EODev%20Saniset%20Fleet%20web.png`,
-    needsRebrand: true,
+    image: "/images/rebrand/hydrogen-geh2.jpg",
   },
   {
     id: "hydrogen-gtm-refueler",
