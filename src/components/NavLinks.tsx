@@ -4,10 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { href: "/about", label: "about" },
-  { href: "/services", label: "services" },
-  { href: "/inventory", label: "inventory" },
-  { href: "/sustainability", label: "sustainability" },
+  { href: "/about", label: "ABOUT" },
+  { href: "/services", label: "SERVICES" },
+  { href: "/inventory", label: "INVENTORY" },
+  { href: "/sustainability", label: "SUSTAINABILITY" },
 ];
 
 export default function NavLinks() {
@@ -45,7 +45,7 @@ export default function NavLinks() {
           href="/quote"
           className="ml-3 inline-flex items-center bg-ink px-5 py-2.5 font-wordmark text-sm font-semibold text-bone transition-colors hover:bg-ecoGreenDeep"
         >
-          quote
+          QUOTE
         </Link>
       </li>
     </ul>
