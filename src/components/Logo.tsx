@@ -3,6 +3,7 @@ import Link from "next/link";
 /**
  * EcoBoom logo - Recreated from reference photo.
  * "eco" in green, white "b" in green box, "oom" in black.
+ * Using Quicksand as it matches the bold rounded sans-serif look.
  */
 type Variant = "light" | "dark";
 
@@ -23,11 +24,11 @@ export default function Logo({
   withLink = true,
   height = 36,
 }: Props) {
-  const boomFill = variant === "dark" ? BONE : INK;
+  const oomFill = variant === "dark" ? BONE : INK;
   
-  // Adjusted width/height to fit the new wordmark structure
-  const W = 320;
-  const H = 80;
+  // Aspect ratio tuned for the wordmark with the box
+  const W = 360;
+  const H = 100;
 
   const inner = (
     <svg
@@ -41,26 +42,26 @@ export default function Logo({
     >
       <style>{`
         .logo-text { 
-          font-family: "Montserrat", "Inter", system-ui, sans-serif; 
+          font-family: "Quicksand", system-ui, sans-serif; 
           font-weight: 700; 
-          font-size: 64px; 
+          font-size: 80px; 
           letter-spacing: -2px; 
         }
       `}</style>
 
       {/* "eco" - green */}
-      <text x="0" y="60" fill={ECO_GREEN} className="logo-text">
+      <text x="0" y="75" fill={ECO_GREEN} className="logo-text">
         eco
       </text>
 
       {/* Green box with white "b" */}
-      <rect x="110" y="8" width="64" height="64" fill={ECO_GREEN} rx="4" />
-      <text x="124" y="60" fill={variant === "dark" ? INK : BONE} className="logo-text">
+      <rect x="135" y="10" width="70" height="70" fill={ECO_GREEN} rx="4" />
+      <text x="148" y="75" fill="white" className="logo-text">
         b
       </text>
 
       {/* "oom" - black on light, cream on dark */}
-      <text x="184" y="60" fill={boomFill} className="logo-text">
+      <text x="215" y="75" fill={oomFill} className="logo-text">
         oom
       </text>
     </svg>
@@ -92,7 +93,7 @@ export function LogoMark({
 }) {
   return (
     <svg
-      viewBox="0 0 64 64"
+      viewBox="0 0 70 70"
       width={size}
       height={size}
       role="img"
@@ -100,15 +101,15 @@ export function LogoMark({
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <rect width="64" height="64" rx="8" fill={color} />
+      <rect width="70" height="70" rx="8" fill={color} />
       <text 
-        x="16" 
-        y="48" 
+        x="18" 
+        y="56" 
         fill="white" 
         style={{ 
-          fontFamily: "Montserrat, Inter, sans-serif", 
+          fontFamily: "Quicksand, sans-serif", 
           fontWeight: 700, 
-          fontSize: "48px" 
+          fontSize: "56px" 
         }}
       >
         b
