@@ -19,8 +19,8 @@ export default function QuotePage() {
               Tell us about <span className="italic text-clay">the show.</span>
             </h1>
             <p className="mt-8 max-w-prose text-lg leading-relaxed text-smoke">
-              The more detail you can share — venue, dates, audience size,
-              what the production looks like — the faster we can come back
+              The more detail you can share - venue, dates, audience size,
+              what the production looks like - the faster we can come back
               with a real number and a plan.
             </p>
           </div>

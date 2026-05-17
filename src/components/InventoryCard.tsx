@@ -10,7 +10,7 @@ type Props = {
 /**
  * Shared inventory card. Renders the real product photo when one is set
  * on the item, and a stylized "branded watermark" placeholder otherwise.
- * Either way the card has presence — no more sad sand-colored boxes.
+ * Either way the card has presence - no more sad sand-colored boxes.
  */
 export default function InventoryCard({
   item,
@@ -37,7 +37,7 @@ export default function InventoryCard({
         {item.category}
       </p>
       <h3 className="mt-2 font-display text-xl leading-snug text-ink">
-        {item.brand} — {item.name}
+        {item.brand} - {item.name}
       </h3>
       <p className="mt-2 text-sm text-smoke">{item.spec}</p>
       {item.notes && (

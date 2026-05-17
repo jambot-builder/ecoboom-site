@@ -18,7 +18,7 @@ export const images = {
   hybridSystem: {
     src: `${WIX}/d42e03_23a03d514df24d4a8abd1af738465ea1~mv2.png/v1/fill/w_1600,h_1200,al_c,q_85,enc_avif,quality_auto/d42e03_23a03d514df24d4a8abd1af738465ea1~mv2.png`,
     alt:
-      "Hybrid power system on location — battery banks paired with a clean diesel generator",
+      "Hybrid power system on location - battery banks paired with a clean diesel generator",
     width: 1600,
     height: 1200,
   },

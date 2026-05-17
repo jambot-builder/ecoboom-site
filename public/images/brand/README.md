@@ -8,7 +8,7 @@ Drop the EcoBoom logo files here. The site code looks for these exact paths:
 | `ecoboom-wordmark-onDark.png`     | Dark backgrounds (ink sections)  |
 | `ecoboom-mark.png`                | Standalone target icon (favicon) |
 
-Prefer SVG if you have it — change the file extension in
+Prefer SVG if you have it - change the file extension in
 `src/components/Logo.tsx` to match. PNG at 2x or 3x resolution also works fine
 for the wordmark.
 

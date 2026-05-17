@@ -1,14 +1,15 @@
 import Link from "next/link";
 
 /**
- * EcoBoom logo — built as inline SVG so it renders perfectly with no
- * external asset dependency. The wordmark uses Nunito (loaded via next/font)
- * for a rounded geometric feel close to the original letterforms.
+ * EcoBoom logo - built as inline SVG.
  *
- * Two visual variants:
- *   - "light" — for use on bone/cream backgrounds (default)
- *   - "dark"  — for use on ink/dark backgrounds; the "boom" text gets a
- *               cream stroke so it stands out from the dark background
+ * The wordmark uses Quicksand (rounded geometric sans, loaded via next/font),
+ * which most closely matches the actual EcoBoom letterforms. The target icon
+ * is drawn as two concentric rounded squares in eco-green.
+ *
+ * Variants:
+ *   - "light" - for use on bone/cream backgrounds (default)
+ *   - "dark"  - for use on ink/dark backgrounds; "boom" text becomes cream
  */
 type Variant = "light" | "dark";
 
@@ -16,7 +17,7 @@ type Props = {
   variant?: Variant;
   className?: string;
   withLink?: boolean;
-  height?: number; // pixel height; width auto-scales
+  height?: number;
 };
 
 const ECO_GREEN = "#84BA40";
@@ -30,10 +31,9 @@ export default function Logo({
   height = 36,
 }: Props) {
   const boomFill = variant === "dark" ? BONE : INK;
-  // SVG natural dimensions. The viewBox is sized to comfortably hold the
-  // wordmark; height/width on the rendered element scale uniformly.
-  const W = 360;
-  const H = 100;
+  // viewBox tuned so wordmark "eco○boom" sits comfortably with the target.
+  const W = 380;
+  const H = 110;
 
   const inner = (
     <svg
@@ -45,34 +45,41 @@ export default function Logo({
       xmlns="http://www.w3.org/2000/svg"
       style={{ display: "block" }}
     >
-      {/* "ec" — green */}
+      {/* "ec" - green */}
       <text
         x="0"
-        y="76"
-        fontFamily='var(--font-wordmark), "Nunito", system-ui, sans-serif'
-        fontWeight={900}
-        fontSize="92"
+        y="82"
+        fontFamily='var(--font-wordmark), "Quicksand", system-ui, sans-serif'
+        fontWeight={700}
+        fontSize="98"
         fill={ECO_GREEN}
-        letterSpacing="-2"
+        letterSpacing="-3"
       >
         ec
       </text>
 
-      {/* Target icon — replaces the "o" in eco. Two nested rounded rects. */}
-      <g transform="translate(94 28)" fill="none" stroke={ECO_GREEN} strokeWidth="7">
-        <rect x="0" y="0" width="58" height="48" rx="14" />
-        <rect x="15" y="12" width="28" height="24" rx="6" />
+      {/* Target icon - the "o" in eco. Two nested rounded rects, slightly
+          wider than tall to match the original. */}
+      <g
+        transform="translate(98 36)"
+        fill="none"
+        stroke={ECO_GREEN}
+        strokeWidth="8"
+        strokeLinejoin="round"
+      >
+        <rect x="0" y="0" width="62" height="48" rx="14" />
+        <rect x="16" y="12" width="30" height="24" rx="6" />
       </g>
 
-      {/* "boom" — black on light, cream on dark */}
+      {/* "boom" - black on light, cream on dark */}
       <text
-        x="160"
-        y="76"
-        fontFamily='var(--font-wordmark), "Nunito", system-ui, sans-serif'
-        fontWeight={900}
-        fontSize="92"
+        x="174"
+        y="82"
+        fontFamily='var(--font-wordmark), "Quicksand", system-ui, sans-serif'
+        fontWeight={700}
+        fontSize="98"
         fill={boomFill}
-        letterSpacing="-2"
+        letterSpacing="-3"
       >
         boom
       </text>
@@ -84,7 +91,11 @@ export default function Logo({
   }
 
   return (
-    <Link href="/" aria-label="EcoBoom — home" className={`inline-flex ${className}`}>
+    <Link
+      href="/"
+      aria-label="EcoBoom - home"
+      className={`inline-flex items-center ${className}`}
+    >
       {inner}
     </Link>
   );
@@ -105,17 +116,17 @@ export function LogoMark({
 }) {
   return (
     <svg
-      viewBox="0 0 70 60"
+      viewBox="0 0 70 56"
       width={size}
-      height={(size * 60) / 70}
+      height={(size * 56) / 70}
       role="img"
       aria-label="EcoBoom mark"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <g fill="none" stroke={color} strokeWidth="7">
-        <rect x="4" y="6" width="62" height="48" rx="14" />
-        <rect x="19" y="18" width="32" height="24" rx="6" />
+      <g fill="none" stroke={color} strokeWidth="7" strokeLinejoin="round">
+        <rect x="4" y="4" width="62" height="48" rx="14" />
+        <rect x="20" y="16" width="30" height="24" rx="6" />
       </g>
     </svg>
   );

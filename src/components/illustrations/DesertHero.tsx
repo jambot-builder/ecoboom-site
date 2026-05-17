@@ -1,9 +1,9 @@
 /**
- * Hand-built SVG: high-desert horizon at dusk with Joshua tree silhouettes,
+ * Hand-built SVG: high desert horizon at dusk with Joshua tree silhouettes,
  * distant mountain ranges, and a low warm sun. Used as the home page hero
  * visual until a real photograph replaces it.
  *
- * Designed to feel editorial — restrained shapes, warm dusty gradient,
+ * Designed to feel editorial - restrained shapes, warm dusty gradient,
  * subtle film-grain texture. No drop shadows, no chrome.
  */
 export default function DesertHero({ className = "" }: { className?: string }) {
@@ -17,7 +17,7 @@ export default function DesertHero({ className = "" }: { className?: string }) {
       preserveAspectRatio="xMidYMid slice"
     >
       <defs>
-        {/* Sky gradient — warm bone at top, dusty rose at horizon */}
+        {/* Sky gradient - warm bone at top, dusty rose at horizon */}
         <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor="#F2ECE2" />
           <stop offset="35%" stopColor="#EFD9C0" />
@@ -26,7 +26,7 @@ export default function DesertHero({ className = "" }: { className?: string }) {
           <stop offset="100%" stopColor="#8F4F38" />
         </linearGradient>
 
-        {/* Sun gradient — warm core to softer edge */}
+        {/* Sun gradient - warm core to softer edge */}
         <radialGradient id="sun" cx="0.5" cy="0.5" r="0.5">
           <stop offset="0%" stopColor="#F8E0B5" />
           <stop offset="55%" stopColor="#F1C48A" stopOpacity="0.9" />
@@ -61,24 +61,24 @@ export default function DesertHero({ className = "" }: { className?: string }) {
       {/* Sky */}
       <rect width="800" height="1000" fill="url(#sky)" />
 
-      {/* Sun — soft halo low on the horizon */}
+      {/* Sun - soft halo low on the horizon */}
       <circle cx="540" cy="640" r="180" fill="url(#sun)" />
       <circle cx="540" cy="640" r="78" fill="#F8E0B5" opacity="0.95" />
 
-      {/* Distant mountain range — far back */}
+      {/* Distant mountain range - far back */}
       <path
         d="M0,720 L60,690 L130,705 L210,670 L280,690 L360,665 L440,685 L520,672 L600,690 L680,675 L800,695 L800,800 L0,800 Z"
         fill="url(#mountainBack)"
       />
 
-      {/* Mid mountains — slightly closer, darker */}
+      {/* Mid mountains - slightly closer, darker */}
       <path
         d="M0,760 L80,735 L170,755 L260,728 L340,748 L420,732 L510,755 L600,738 L700,758 L800,748 L800,820 L0,820 Z"
         fill="#7A4836"
         opacity="0.65"
       />
 
-      {/* Ground — desert floor wash */}
+      {/* Ground - desert floor wash */}
       <rect x="0" y="780" width="800" height="220" fill="#2D1F18" />
       <rect
         x="0"
@@ -111,7 +111,7 @@ export default function DesertHero({ className = "" }: { className?: string }) {
 
 /**
  * Single Joshua tree silhouette. (x, y) is the base of the trunk.
- * Built as a small library of organic shapes — trunk, branches, and the
+ * Built as a small library of organic shapes - trunk, branches, and the
  * spiky pom-pom clusters that give Joshua trees their signature.
  */
 function JoshuaTree({
@@ -129,7 +129,7 @@ function JoshuaTree({
       fill="#1A1612"
       stroke="#1A1612"
     >
-      {/* Main trunk — slightly tapered, organic */}
+      {/* Main trunk - slightly tapered, organic */}
       <path
         d="M -8,0 L -7,-90 Q -6,-130 -3,-160 L 3,-160 Q 6,-130 7,-90 L 8,0 Z"
         strokeWidth="0"
@@ -142,7 +142,7 @@ function JoshuaTree({
         strokeWidth="11"
         strokeLinecap="round"
       />
-      {/* Left branch — sub-branch */}
+      {/* Left branch - sub-branch */}
       <path
         d="M -42,-152 Q -52,-148 -65,-138"
         fill="none"
@@ -165,7 +165,7 @@ function JoshuaTree({
         strokeLinecap="round"
       />
 
-      {/* Pom-pom clusters at branch tips — spiky polygon stars */}
+      {/* Pom-pom clusters at branch tips - spiky polygon stars */}
       <Cluster cx={-58} cy={-185} r={18} />
       <Cluster cx={-67} cy={-140} r={14} />
       <Cluster cx={50} cy={-215} r={20} />
