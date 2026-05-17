@@ -45,29 +45,23 @@ export default function Logo({
       xmlns="http://www.w3.org/2000/svg"
       style={{ display: "block" }}
     >
-      {/* "ec" - black on light, cream on dark */}
+      {/* "ec" - green */}
       <text
         x="0"
         y="82"
         fontFamily='var(--font-wordmark), "Quicksand", system-ui, sans-serif'
         fontWeight={700}
         fontSize="98"
-        fill={boomFill}
+        fill={ECO_GREEN}
         letterSpacing="-3"
       >
         ec
       </text>
 
-      {/* Target icon - the "o" in eco. Concentric rounded squares in green. */}
-      <g
-        transform="translate(98 30)"
-        fill="none"
-        stroke={ECO_GREEN}
-        strokeWidth="10"
-        strokeLinejoin="round"
-      >
-        <rect x="0" y="0" width="60" height="56" rx="14" />
-        <rect x="18" y="16" width="24" height="24" rx="4" />
+      {/* The "o" icon - solid green rounded square with a hole (the o) */}
+      <g transform="translate(98 30)">
+        <rect x="0" y="0" width="56" height="56" rx="12" fill={ECO_GREEN} />
+        <circle cx="28" cy="28" r="14" fill={variant === "dark" ? INK : BONE} />
       </g>
 
       {/* "boom" - black on light, cream on dark */}
