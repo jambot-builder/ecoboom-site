@@ -59,7 +59,7 @@ export async function POST(req: Request) {
       {
         ok: false,
         message:
-          "We couldn't send that just now. Please email us directly — we'll get right back.",
+          "We couldn't send that just now. Please email us directly - we'll get right back.",
       },
       { status: 500 }
     );

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter, JetBrains_Mono, Nunito } from "next/font/google";
+import { Fraunces, Inter, JetBrains_Mono, Quicksand } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
@@ -24,18 +24,18 @@ const mono = JetBrains_Mono({
   display: "swap",
 });
 
-// Used by the Logo component for the wordmark. Rounded geometric sans —
-// close to the original EcoBoom hand-built letterforms.
-const wordmark = Nunito({
+// Used by the Logo component for the wordmark. Quicksand has the rounded
+// geometric letterforms that match the actual EcoBoom logo most closely.
+const wordmark = Quicksand({
   subsets: ["latin"],
   variable: "--font-wordmark",
   display: "swap",
-  weight: ["800", "900"],
+  weight: ["600", "700"],
 });
 
 export const metadata: Metadata = {
   title: {
-    default: `${site.name} — ${site.tagline}`,
+    default: `${site.name} - ${site.tagline}`,
     template: `%s · ${site.name}`,
   },
   description: site.positioning.short,

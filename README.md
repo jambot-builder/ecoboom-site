@@ -1,8 +1,8 @@
 # EcoBoom
 
-The website for EcoBoom — a high-desert boutique rental house for film,
-festival, and live event production. Audio systems, generators, distro, and
-the years of experience to make them work on a show.
+The website for EcoBoom, a boutique rental house for film, festival, and
+live event production. Hybrid event power, audio systems, generators,
+distro, and the years of experience to make them work on a show.
 
 Built with **Next.js 14** (App Router), **TypeScript**, and **Tailwind CSS**.
 
@@ -31,10 +31,10 @@ Copy `.env.example` to `.env.local` and fill in:
 | Var                       | What it does                                                       |
 | ------------------------- | ------------------------------------------------------------------ |
 | `QUOTE_RECIPIENT_EMAIL`   | The address that receives quote-form submissions                   |
-| `RESEND_API_KEY`          | API key for [Resend](https://resend.com) — handles outbound email  |
+| `RESEND_API_KEY`          | API key for [Resend](https://resend.com) - handles outbound email  |
 | `QUOTE_FROM_EMAIL`        | Verified "from" address (e.g. `quotes@ecoboom.org`)                |
 
-If `RESEND_API_KEY` is empty, the quote form still works — it just logs
+If `RESEND_API_KEY` is empty, the quote form still works - it just logs
 submissions to the server console instead of sending email. Useful for dev.
 
 ---
@@ -73,13 +73,13 @@ The site is ready to deploy with placeholder content. Things to swap in:
 - **Real photos.** Every `placeholder-image` block in the code marks a spot
   for a real photo. Drop them into `public/images/` and replace the
   placeholders in the page files (use `next/image`).
-- **Contact info** in `src/data/site.ts` — email, phone, address, social.
-- **Inventory list** in `src/data/inventory.ts` — your real gear, quantities,
+- **Contact info** in `src/data/site.ts` - email, phone, address, social.
+- **Inventory list** in `src/data/inventory.ts` - your real gear, quantities,
   spec sheets, and photos.
-- **About-page copy** — the current text is positioning placeholder. Replace
+- **About-page copy** - the current text is positioning placeholder. Replace
   with the real EcoBoom story.
-- **Client / credibility logos** — the home page has a placeholder credibility
+- **Client / credibility logos** - the home page has a placeholder credibility
   section. Add real logos once you have permission.
-- **Favicon** — drop `public/favicon.ico` (or `app/icon.png`).
+- **Favicon** - drop `public/favicon.ico` (or `app/icon.png`).
 
 See `HANDOFF.md` for full deployment + DNS instructions.

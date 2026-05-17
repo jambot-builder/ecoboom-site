@@ -1,14 +1,8 @@
 import Link from "next/link";
 
 /**
- * EcoBoom logo — built as inline SVG so it renders perfectly with no
- * external asset dependency. The wordmark uses Nunito (loaded via next/font)
- * for a rounded geometric feel close to the original letterforms.
- *
- * Two visual variants:
- *   - "light" — for use on bone/cream backgrounds (default)
- *   - "dark"  — for use on ink/dark backgrounds; the "boom" text gets a
- *               cream stroke so it stands out from the dark background
+ * EcoBoom logo - Recreated from reference photo.
+ * "eco" in green, white "b" in green box, "oom" in black.
  */
 type Variant = "light" | "dark";
 
@@ -16,10 +10,10 @@ type Props = {
   variant?: Variant;
   className?: string;
   withLink?: boolean;
-  height?: number; // pixel height; width auto-scales
+  height?: number;
 };
 
-const ECO_GREEN = "#84BA40";
+const ECO_GREEN = "#86BC41";
 const INK = "#1A1612";
 const BONE = "#FAF6EE";
 
@@ -30,10 +24,10 @@ export default function Logo({
   height = 36,
 }: Props) {
   const boomFill = variant === "dark" ? BONE : INK;
-  // SVG natural dimensions. The viewBox is sized to comfortably hold the
-  // wordmark; height/width on the rendered element scale uniformly.
-  const W = 360;
-  const H = 100;
+  
+  // Adjusted width/height to fit the new wordmark structure
+  const W = 320;
+  const H = 80;
 
   const inner = (
     <svg
@@ -45,36 +39,29 @@ export default function Logo({
       xmlns="http://www.w3.org/2000/svg"
       style={{ display: "block" }}
     >
-      {/* "ec" — green */}
-      <text
-        x="0"
-        y="76"
-        fontFamily='var(--font-wordmark), "Nunito", system-ui, sans-serif'
-        fontWeight={900}
-        fontSize="92"
-        fill={ECO_GREEN}
-        letterSpacing="-2"
-      >
-        ec
+      <style>{`
+        .logo-text { 
+          font-family: "Montserrat", "Inter", system-ui, sans-serif; 
+          font-weight: 700; 
+          font-size: 64px; 
+          letter-spacing: -2px; 
+        }
+      `}</style>
+
+      {/* "eco" - green */}
+      <text x="0" y="60" fill={ECO_GREEN} className="logo-text">
+        eco
       </text>
 
-      {/* Target icon — replaces the "o" in eco. Two nested rounded rects. */}
-      <g transform="translate(94 28)" fill="none" stroke={ECO_GREEN} strokeWidth="7">
-        <rect x="0" y="0" width="58" height="48" rx="14" />
-        <rect x="15" y="12" width="28" height="24" rx="6" />
-      </g>
+      {/* Green box with white "b" */}
+      <rect x="110" y="8" width="64" height="64" fill={ECO_GREEN} rx="4" />
+      <text x="124" y="60" fill={variant === "dark" ? INK : BONE} className="logo-text">
+        b
+      </text>
 
-      {/* "boom" — black on light, cream on dark */}
-      <text
-        x="160"
-        y="76"
-        fontFamily='var(--font-wordmark), "Nunito", system-ui, sans-serif'
-        fontWeight={900}
-        fontSize="92"
-        fill={boomFill}
-        letterSpacing="-2"
-      >
-        boom
+      {/* "oom" - black on light, cream on dark */}
+      <text x="184" y="60" fill={boomFill} className="logo-text">
+        oom
       </text>
     </svg>
   );
@@ -84,16 +71,16 @@ export default function Logo({
   }
 
   return (
-    <Link href="/" aria-label="EcoBoom — home" className={`inline-flex ${className}`}>
+    <Link
+      href="/"
+      aria-label="EcoBoom - home"
+      className={`inline-flex items-center ${className}`}
+    >
       {inner}
     </Link>
   );
 }
 
-/**
- * Standalone target mark (the bracketed-rect icon without the wordmark).
- * Used for favicon-like uses or as a decorative accent.
- */
 export function LogoMark({
   size = 36,
   color = ECO_GREEN,
@@ -105,18 +92,27 @@ export function LogoMark({
 }) {
   return (
     <svg
-      viewBox="0 0 70 60"
+      viewBox="0 0 64 64"
       width={size}
-      height={(size * 60) / 70}
+      height={size}
       role="img"
       aria-label="EcoBoom mark"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
     >
-      <g fill="none" stroke={color} strokeWidth="7">
-        <rect x="4" y="6" width="62" height="48" rx="14" />
-        <rect x="19" y="18" width="32" height="24" rx="6" />
-      </g>
+      <rect width="64" height="64" rx="8" fill={color} />
+      <text 
+        x="16" 
+        y="48" 
+        fill="white" 
+        style={{ 
+          fontFamily: "Montserrat, Inter, sans-serif", 
+          fontWeight: 700, 
+          fontSize: "48px" 
+        }}
+      >
+        b
+      </text>
     </svg>
   );
 }

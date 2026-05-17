@@ -6,34 +6,32 @@
  */
 export const site = {
   name: "EcoBoom",
-  tagline: "Event partners for film, music, and live production.",
+  tagline: "Hybrid event power, audio, and production rentals.",
   domain: "ecoboom.org",
 
-  // PLACEHOLDER — replace with the real business contact info.
+  // PLACEHOLDER - replace with the real business contact info.
   contact: {
     email: "hello@ecoboom.org",
-    phone: "(760) 555-0100",
+    phone: "(310) 905-4683",
     location: "Yucca Valley, CA",
     serviceArea:
-      "High Desert + Low Desert — Joshua Tree, Yucca Valley, Palm Springs, Coachella Valley, Los Angeles basin.",
+      "California - Yucca Valley HQ, serving Palm Springs, Coachella Valley, Los Angeles basin, and beyond.",
   },
 
   social: {
-    instagram: "https://www.instagram.com/", // PLACEHOLDER
+    instagram: "https://www.instagram.com/ecoboom/",
     linkedin: "https://www.linkedin.com/",   // PLACEHOLDER
   },
 
   positioning: {
     short:
-      "Hybrid event power, audio, and production support for film and festivals in the California desert.",
+      "Hybrid event power, audio, and production rentals for film, festival, and live event productions.",
     long:
-      "EcoBoom is a high-desert rental house built around hybrid event power — battery systems piggybacked onto smart diesel generators that cut fuel consumption by roughly 90%. Alongside power, we supply ground-stacked PA systems from QSC, L-Acoustics, Meyer, and VUE Audiotechnik, plus the distro, cable, and crew expertise to make any production work.",
+      "EcoBoom is the rental partner built around hybrid event power - battery systems piggybacked onto smart diesel generators that cut fuel consumption by roughly 90%. Alongside power we supply audio systems from Meyer Sound, L-Acoustics, QSC, and VUE Audiotechnik, plus distro, EVs, mobile charging, and the on-site crew expertise that makes any production work.",
   },
 
-  // Used in the home page "credibility" strip. Replace with real partners once
-  // we have permission to use logos.
   credibility: {
-    headline: "Trusted by productions across the desert and beyond",
+    headline: "Trusted on set",
     note:
       "Decades of combined experience supporting film shoots, music festivals, brand activations, and private events.",
   },

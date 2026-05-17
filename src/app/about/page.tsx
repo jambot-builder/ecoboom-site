@@ -8,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "EcoBoom is a high-desert rental house for film, festival, and live production — built on years of event power and audio expertise.",
+    "EcoBoom is the rental partner for film, festival, and live event productions - built around hybrid event power.",
 };
 
 export default function AboutPage() {
@@ -16,15 +16,15 @@ export default function AboutPage() {
     <>
       <section className="container-page pt-20 pb-16 sm:pt-28">
         <p className="eyebrow">About</p>
-        <h1 className="mt-6 max-w-4xl font-display text-5xl leading-[1.05] tracking-tight text-ink sm:text-7xl">
-          A boutique rental house,{" "}
-          <span className="italic text-clay">built in the desert.</span>
+        <h1 className="mt-6 max-w-4xl font-display text-5xl leading-[1.02] tracking-tight text-ink sm:text-7xl">
+          The rental partner built around{" "}
+          <span className="text-ecoGreenDeep">cleaner event power.</span>
         </h1>
         <p className="mt-8 max-w-prose text-lg leading-relaxed text-smoke">
           EcoBoom started as a production company supporting events, film,
-          and locations. Today, it&rsquo;s the rental partner for productions
-          that want the gear, the expertise, and the people who know what
-          the show actually needs.
+          and locations. Today, it&rsquo;s the rental house productions
+          call when they want the gear, the expertise, and a crew that knows
+          the show.
         </p>
       </section>
 
@@ -47,25 +47,25 @@ export default function AboutPage() {
               <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-ink/30" />
             </div>
             <p className="mt-3 font-mono text-xs uppercase tracking-widest text-dust">
-              On location — hybrid power, quietly humming
+              On location - hybrid power, quietly humming
             </p>
           </div>
           <div className="md:col-span-7">
             <p className="eyebrow">Who we are</p>
             <div className="mt-6 space-y-6 text-lg leading-relaxed text-smoke">
               <p>
-                We grew up doing this work — building stages, sizing
+                We grew up doing this work - building stages, sizing
                 generators, designing audio rigs, troubleshooting power at 2am
                 when the show had to go on. EcoBoom was born out of years of
-                doing that at the highest level for the productions that come
+                that at the highest level for the productions that come
                 through California.
               </p>
               <p>
-                Now we&rsquo;re a rental house first, but the production
-                instinct is still our advantage. We know what a riding
-                production manager needs because we&rsquo;ve been in the
-                trailer next door. We know how to make a remote site work
-                because we&rsquo;ve done the recon ourselves.
+                We&rsquo;re a rental house first, but the production instinct
+                is the real advantage. We know what a production manager
+                needs because we&rsquo;ve been in the trailer next door. We
+                know how to make a remote site work because we&rsquo;ve done
+                the recon ourselves.
               </p>
             </div>
           </div>
@@ -73,40 +73,39 @@ export default function AboutPage() {
       </section>
 
       <section className="bg-ink text-bone">
-        <div className="container-page py-24 sm:py-32">
+        <div className="container-page py-20 sm:py-28">
           <div className="grid gap-12 md:grid-cols-12">
             <div className="md:col-span-4">
-              <p className="text-eyebrow uppercase tracking-widest text-stone">
+              <p className="text-eyebrow uppercase tracking-widest text-ecoGreen">
                 Where we work
               </p>
             </div>
             <div className="md:col-span-8 space-y-6 text-lg leading-relaxed text-stone/90">
               <p>
-                We&rsquo;re based in the High Desert — Yucca Valley and Joshua
-                Tree country — and the bulk of our work runs the corridor
-                from Los Angeles down to the Coachella Valley. We&rsquo;re a
-                short call from Palm Springs, Indio, and the festival grounds,
-                and we&rsquo;re close enough to L.A. to make a same-day
-                turnaround possible when it needs to happen.
+                We&rsquo;re based in Yucca Valley, and the bulk of our work
+                runs the California corridor - Los Angeles down to the
+                Coachella Valley and through Palm Springs. We&rsquo;re close
+                enough to L.A. to make same-day turnarounds, and a short call
+                from Indio and the festival grounds.
               </p>
               <p>
-                For productions coming into the desert &mdash; whether
-                that&rsquo;s a feature shoot, a brand activation, a fashion
-                week, or a music festival &mdash; we&rsquo;re the local who
-                already knows the venue, the permits, and the people.
+                For productions coming through - feature shoots, brand
+                activations, fashion weeks, music festivals -
+                we&rsquo;re the local who already knows the venue, the
+                permits, and the people.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="container-page py-24 sm:py-32">
+      <section className="container-page py-20 sm:py-28">
         <div className="mx-auto max-w-narrow">
           <p className="eyebrow text-center">What we believe</p>
-          <p className="mt-8 font-display text-3xl italic leading-snug text-ink sm:text-4xl">
+          <p className="mt-8 text-center font-display text-3xl leading-snug text-ink sm:text-4xl">
             Productions can be powered cleanly without losing reliability.
-            That&rsquo;s the whole point of EcoBoom &mdash; not a marketing
-            angle, but the way we actually run the work.
+            That&rsquo;s the point of EcoBoom - not a marketing angle, but
+            the way we actually run the work.
           </p>
           <div className="mt-12 space-y-6 text-lg leading-relaxed text-smoke">
             <p>
@@ -131,14 +130,11 @@ export default function AboutPage() {
           <div className="md:col-span-8">
             <p className="eyebrow">Get in touch</p>
             <h2 className="mt-6 font-display text-4xl leading-tight text-ink sm:text-5xl">
-              Building something in the desert?{" "}
-              <span className="italic text-clay">Let&rsquo;s talk.</span>
+              Got a production?{" "}
+              <span className="text-ecoGreenDeep">Let&rsquo;s talk.</span>
             </h2>
             <p className="mt-4 max-w-prose text-smoke">
-              <a
-                href={`mailto:${site.contact.email}`}
-                className="link-clay"
-              >
+              <a href={`mailto:${site.contact.email}`} className="link-clay">
                 {site.contact.email}
               </a>
               {"  ·  "}
@@ -151,7 +147,10 @@ export default function AboutPage() {
             </p>
           </div>
           <div className="md:col-span-4 md:text-right">
-            <Link href="/quote" className="btn-primary">
+            <Link
+              href="/quote"
+              className="inline-flex items-center gap-2 bg-ink px-6 py-3.5 font-wordmark text-sm font-semibold text-bone transition-colors hover:bg-ecoGreenDeep"
+            >
               Request a Quote
               <ArrowUpRight size={16} />
             </Link>

@@ -9,17 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // High-desert palette — muted, dusty, editorial.
+        // High-desert palette - muted, dusty, editorial.
         // Reference points: Joshua Tree House, La Copine, Mojave Sands.
-        bone: "#F2ECE2",        // background — warm bone / unbleached paper
+        bone: "#F2ECE2",        // background - warm bone / unbleached paper
         moonlight: "#FAF6EE",   // lightest, for hero washes
         sand: "#E4D9C5",        // soft sand divider
-        stone: "#CFC2A9",       // mid sand — secondary surfaces
-        clay: "#A8654A",        // muted dusty clay — editorial italic accent
+        stone: "#CFC2A9",       // mid sand - secondary surfaces
+        clay: "#A8654A",        // muted dusty clay - editorial italic accent
         clayDeep: "#7E4632",    // hover state for clay
         cactus: "#697061",      // muted sage / dusty olive
         cactusDeep: "#4E5448",  // darker sage
-        // Brand green — exact value from the EcoBoom logo wordmark.
+        // Brand green - exact value from the EcoBoom logo wordmark.
         ecoGreen: "#84BA40",
         ecoGreenDeep: "#5C822D",
         ink: "#1A1612",         // primary text / dark sections

@@ -62,14 +62,14 @@ export default function QuoteForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-10">
-      <Section label="01 — Who are you?">
+      <Section label="01 - Who are you?">
         <Field label="Name" name="name" required />
         <Field label="Company / Production" name="company" />
         <Field label="Email" name="email" type="email" required />
         <Field label="Phone" name="phone" type="tel" />
       </Section>
 
-      <Section label="02 — When and where?">
+      <Section label="02 - When and where?">
         <Field
           label="Event date(s)"
           name="eventDates"
@@ -82,7 +82,7 @@ export default function QuoteForm() {
         />
       </Section>
 
-      <Section label="03 — What do you need?">
+      <Section label="03 - What do you need?">
         <TextArea
           label="Gear & scope"
           name="gearNeeded"

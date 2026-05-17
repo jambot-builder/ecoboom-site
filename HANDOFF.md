@@ -1,4 +1,4 @@
-# EcoBoom — Handoff & Deploy Guide
+# EcoBoom - Handoff & Deploy Guide
 
 Practical steps to get this site running locally, into the existing GitHub
 repo, deployed to Vercel, and pointed at ecoboom.org.
@@ -15,7 +15,7 @@ npm install         # one-time, takes a couple minutes
 npm run dev
 ```
 
-Open http://localhost:3000. Hot reload is on — edit a file and the page
+Open http://localhost:3000. Hot reload is on - edit a file and the page
 refreshes.
 
 ---
@@ -73,7 +73,7 @@ branches create preview deployments.
 ## 4. Add environment variables in Vercel
 
 Project → Settings → **Environment Variables**. Add these for **Production**
-(and `Preview` if you want previews to send real emails — usually you
+(and `Preview` if you want previews to send real emails - usually you
 don't):
 
 | Variable                | Value                                          |
@@ -82,7 +82,7 @@ don't):
 | `RESEND_API_KEY`        | From your Resend dashboard (see step 5)        |
 | `QUOTE_FROM_EMAIL`      | The verified sender, e.g. `quotes@ecoboom.org` |
 
-If you skip `RESEND_API_KEY` for now, the form will still submit — it'll
+If you skip `RESEND_API_KEY` for now, the form will still submit - it'll
 log to the server console and you'll see entries in Vercel's runtime logs.
 That's fine for testing the deploy.
 
@@ -91,13 +91,13 @@ That's fine for testing the deploy.
 ## 5. Set up Resend for the quote form
 
 1. Sign up at https://resend.com (free tier covers tons of usage)
-2. Add and verify the `ecoboom.org` domain — Resend will give you the DNS
+2. Add and verify the `ecoboom.org` domain - Resend will give you the DNS
    records (SPF, DKIM, return-path) to add
 3. Create an API key in **API Keys** → copy and paste into Vercel's
    `RESEND_API_KEY` env var
 
 If you'd rather not run your own sender, plug **Formspree** or **Plunk** in
-instead — `src/lib/email.ts` is the only file that needs to change.
+instead - `src/lib/email.ts` is the only file that needs to change.
 
 ---
 
@@ -109,26 +109,26 @@ Vercel will tell you the exact DNS records to add. The two common shapes:
 - **Apex domain** (`ecoboom.org`): add an `A` record → `76.76.21.21`
 - **www subdomain**: add a `CNAME` → `cname.vercel-dns.com`
 
-Add those records wherever your DNS lives (likely Squarespace today —
+Add those records wherever your DNS lives (likely Squarespace today -
 check there first, or wherever the nameservers point). Allow a few hours
 for propagation. Vercel will auto-provision SSL once DNS resolves.
 
 You can also set `www.ecoboom.org` as the canonical and redirect the apex,
-or vice versa — Vercel's domain settings let you pick.
+or vice versa - Vercel's domain settings let you pick.
 
 ---
 
-## 7. Punch list — before launch
+## 7. Punch list - before launch
 
 Everything in this list is **placeholder content** that needs real values:
 
 ### Required
-- [ ] `src/data/site.ts` — replace contact email, phone, location, socials
-- [ ] `src/data/inventory.ts` — real gear list, models, photos
+- [ ] `src/data/site.ts` - replace contact email, phone, location, socials
+- [ ] `src/data/inventory.ts` - real gear list, models, photos
 - [ ] **Hero photo** on the home page (replace the `placeholder-image` block)
-- [ ] **Service photos** — one per service page
+- [ ] **Service photos** - one per service page
 - [ ] **Crew/portrait photo** on the About page
-- [ ] **Favicon** — drop a `favicon.ico` into the project root, or `app/icon.png`
+- [ ] **Favicon** - drop a `favicon.ico` into the project root, or `app/icon.png`
 - [ ] **Real quote-form recipient email** (`QUOTE_RECIPIENT_EMAIL`)
 - [ ] **Resend DKIM/SPF DNS records** set up
 
@@ -165,7 +165,7 @@ import Image from "next/image";
 import hero from "@/../public/images/hero.jpg"; // or relative path
 
 <div className="relative aspect-[4/5] w-full overflow-hidden">
-  <Image src={hero} alt="EcoBoom — ground-stacked rig at dusk" fill className="object-cover" priority />
+  <Image src={hero} alt="EcoBoom - ground-stacked rig at dusk" fill className="object-cover" priority />
 </div>
 ```
 
