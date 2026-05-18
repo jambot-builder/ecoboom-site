@@ -27,7 +27,7 @@ export default function Logo({
   const oomFill = variant === "dark" ? BONE : INK;
   
   // Aspect ratio tuned for the wordmark with the box
-  const W = 360;
+  const W = 420;
   const H = 100;
 
   const inner = (
@@ -50,18 +50,18 @@ export default function Logo({
       `}</style>
 
       {/* "eco" - green */}
-      <text x="0" y="75" fill={ECO_GREEN} className="logo-text">
+      <text x="10" y="75" fill={ECO_GREEN} className="logo-text">
         eco
       </text>
 
       {/* Green box with white "b" */}
-      <rect x="135" y="10" width="70" height="70" fill={ECO_GREEN} rx="4" />
-      <text x="148" y="75" fill="white" className="logo-text">
+      <rect x="155" y="10" width="70" height="70" fill={ECO_GREEN} rx="4" />
+      <text x="168" y="75" fill="white" className="logo-text">
         b
       </text>
 
       {/* "oom" - black on light, cream on dark */}
-      <text x="215" y="75" fill={oomFill} className="logo-text">
+      <text x="245" y="75" fill={oomFill} className="logo-text">
         oom
       </text>
     </svg>
