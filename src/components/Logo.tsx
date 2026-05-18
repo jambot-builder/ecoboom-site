@@ -3,7 +3,7 @@ import Link from "next/link";
 /**
  * EcoBoom logo - Recreated from reference photo.
  * "eco" in green, white "b" in green box, "oom" in black.
- * Using Quicksand as it matches the bold rounded sans-serif look.
+ * Width expanded and spacing tuned to prevent clipping.
  */
 type Variant = "light" | "dark";
 
@@ -26,8 +26,9 @@ export default function Logo({
 }: Props) {
   const oomFill = variant === "dark" ? BONE : INK;
   
-  // Aspect ratio tuned for the wordmark with the box
-  const W = 420;
+  // High-width viewBox to ensure no text/box clipping on edges.
+  // W=480 provides significant safety margin for the 7-character wordmark + box.
+  const W = 480;
   const H = 100;
 
   const inner = (
@@ -38,7 +39,7 @@ export default function Logo({
       role="img"
       aria-label="EcoBoom"
       xmlns="http://www.w3.org/2000/svg"
-      style={{ display: "block" }}
+      style={{ display: "block", overflow: "visible" }}
     >
       <style>{`
         .logo-text { 
@@ -49,19 +50,19 @@ export default function Logo({
         }
       `}</style>
 
-      {/* "eco" - green */}
+      {/* "eco" - green (starting with offset to prevent left clipping) */}
       <text x="10" y="75" fill={ECO_GREEN} className="logo-text">
         eco
       </text>
 
       {/* Green box with white "b" */}
-      <rect x="155" y="10" width="70" height="70" fill={ECO_GREEN} rx="4" />
-      <text x="168" y="75" fill="white" className="logo-text">
+      <rect x="145" y="10" width="70" height="70" fill={ECO_GREEN} rx="4" />
+      <text x="158" y="75" fill="white" className="logo-text">
         b
       </text>
 
       {/* "oom" - black on light, cream on dark */}
-      <text x="245" y="75" fill={oomFill} className="logo-text">
+      <text x="225" y="75" fill={oomFill} className="logo-text">
         oom
       </text>
     </svg>

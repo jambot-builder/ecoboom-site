@@ -5,8 +5,10 @@ import MobileMenu from "./MobileMenu";
 export default function Nav() {
   return (
     <header className="z-40 border-b border-line/60 bg-bone">
-      <div className="container-page flex h-24 items-center justify-between">
-        <Logo variant="light" height={42} />
+      <div className="container-page flex h-32 items-center justify-between py-4">
+        <div className="flex-shrink-0">
+          <Logo variant="light" height={48} />
+        </div>
 
         <nav className="hidden md:block">
           <Link
